@@ -184,7 +184,8 @@ def choice_probs(theta: Params, mkt_arrays: dict, alpha_lr=None):
 
     Returns s_pair (P, R), s_abroad (L, R) and logsum (L, R) = ln[exp(V_0) + sum_g exp(I_g)],
     which gives consumer surplus CS = logsum / alpha. alpha_lr (L, R) overrides alpha_types
-    (used to reproduce the toy, where alpha varies by location).
+    (used to reproduce the toy, where alpha varies by location). Optional mkt_arrays["p_store"] (J,) gives
+    each store its own price (the digital twin); otherwise every store charges its banner's price theta.p[b].
     """
     a = mkt_arrays
     L, G = a["hh"].shape[0], len(NESTS)
@@ -193,7 +194,8 @@ def choice_probs(theta: Params, mkt_arrays: dict, alpha_lr=None):
         alpha_lr = jnp.broadcast_to(alpha_types(theta, a["type_y"]), (L, a["type_y"].shape[0]))
     b = a["store_banner"][a["pair_store"]]
     xi = a.get("xi_store", jnp.zeros(a["store_banner"].shape[0]))[a["pair_store"]]
-    V = (theta.delta[b] + xi)[:, None] - alpha_lr[a["pair_loc"]] * theta.p[b][:, None] \
+    price = a["p_store"][a["pair_store"]] if "p_store" in a else theta.p[b]       # store prices override banner prices
+    V = (theta.delta[b] + xi)[:, None] - alpha_lr[a["pair_loc"]] * price[:, None] \
         - theta.gamma * a["pair_time"][:, None]                                   # (P, R)
     V0 = -alpha_lr * theta.p_abroad - theta.kappa * a["border_min"][:, None]      # (L, R)
 

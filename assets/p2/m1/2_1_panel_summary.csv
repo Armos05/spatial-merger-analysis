@@ -1,0 +1,14 @@
+item,value
+store-week rows (observed),700792
+category rows,14015840
+stores,4565
+weeks,156
+first week,2022-01-03
+last week,2024-12-23
+"missing store-weeks, %",1.593506894711716
+"price sd around banner base, %",4.488439417931579
+"price variance share: cost shocks (instrument), %",28.4959541505315
+"price variance share: demand response (endogeneity), %",60.940196085036504
+"price variance share: national flyers, %",5.721487437684214
+"price variance share: local promotions, %",3.7712613055563966
+"price variance share: other noise, %",0.7940355130508581

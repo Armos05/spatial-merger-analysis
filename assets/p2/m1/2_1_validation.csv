@@ -1,0 +1,6 @@
+check,value,comment
+"max |twin − Pillar 1| baskets per store, base week",1.8189894035458565e-12,should be ~0
+"true own-price elasticity, mean over stores",-4.372822325833365,answer key
+"true own-price elasticity, basket-weighted",-4.365506853021054,answer key
+naive OLS (store + week FE),-2.514832977050381,biased towards 0: prices rise when demand is strong
+IV with cost index (store + week FE),-4.153219270304973,"cost shocks are partly regional, so sister stores move too"
