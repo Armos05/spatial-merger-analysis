@@ -24,6 +24,8 @@ STEPS = [
     "30_experiments.py",   # Pillar 3 step 1: coupon A/B tests → uplift (T-learner) → α̂ per household [sim]
     "31_prediction.py",    # Pillar 3 step 2: prediction quality, Cumulus only vs pooled; learning curve [sim]
     "32_pricing.py",       # Pillar 3 step 3: {uniform, personal} × {competition, merger}; interaction [sim]
+    "33_ring_fence.py",    # Pillar 3 step 4: local-DP ring-fence, privacy-vs-competition curve [sim]
+    "34_audit.py",         # Pillar 3 step 5: WEKO test-account audit + power calculation [sim]
     # later steps append here: 20_screening.py, 30_simulation.py, ...
 ]
 

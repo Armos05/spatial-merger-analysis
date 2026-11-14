@@ -49,6 +49,7 @@ Last updated: 14 Nov 2026.
 | D23 | Coupon A/B tests on the loyalty panel, card-history features, uplift τ̂ and α̂ by data regime (location / own card / pooled) | `scripts/30_experiments.py` | T-learner (LightGBM Poisson, 5-fold) + inversion of the firm model | [sim] | `assets/p3/m1/3_1_*` |
 | D24 | Prediction quality of α̂ by regime and household group; learning curve by weeks of history | `scripts/31_prediction.py` | correlation, relative RMSE, precision at top 20%, calibration deciles | [sim] | `assets/p3/m2/3_2_*` |
 | D25 | Personalised pricing scenarios per household (uniform/personal × competition/merger, ring-fenced, address-only, perfect data) | `scripts/32_pricing.py` | Nash / joint Newton per household on the firm belief model; truth evaluation | [sim] | `assets/p3/m3/3_3_*` |
+| D27 | WEKO audit: paired synthetic loyalty profiles at 2,000 addresses, offers before/after; power by effect size | `scripts/34_audit.py` | LightGBM surrogate of α̂ + 3.3 coupon solver; two-sample and paired power formulas, 2% offer noise [assumed] | [sim] | `assets/p3/m5/3_5_*` |
 
 ## Key numbers from Phase 1 (for the appendix)
 - **Population:** 9,123,704 in 347,736 populated hectares → 32,388 shopper locations.
