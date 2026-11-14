@@ -8,6 +8,7 @@ STEPS = [
     "02_geography.py",     # shopper locations, income, drive times, border times, detour check
     "10_demand.py",        # Pillar 1 step 1: choice sets, income types, demand at priors
     "11_calibrate.py",     # Pillar 1 step 2: delta fitted to 2025 sales shares + card-data abroad share
+    "12_diversion.py",     # Pillar 1 step 3: store Jacobian, diversion (store, player, canton), elasticities
     # later steps append here: 20_screening.py, 30_simulation.py, ...
 ]
 

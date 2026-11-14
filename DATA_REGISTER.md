@@ -32,6 +32,7 @@ Last updated: 14 Nov 2026.
 | D7 | Detour factor (road km / straight km) | `02_geography.py` | 82,304 sampled location–store pairs 2–25 km apart | [real] | `outputs/tables/detour_factor.csv` |
 | D8 | Demand market: 5.31 m location–store pairs ≤ 25 min, 7 income types per location, 4.27 m households | `scripts/10_demand.py` | flat pair arrays sorted by location; 147 locations without a store in reach dropped | [real] inputs | `data/processed/market.npz` |
 | D9 | Calibrated demand parameters (δ per banner) and local shares | `scripts/11_calibrate.py` | Berry contraction on revenue shares; 679 iterations to 1e−10 | [calibrated] | `assets/p1/m2/1_2_params.json`, `1_2_*.csv` |
+| D10 | Store Jacobian dq_k/dp_j (4,565 × 4,565 sparse, 4.26 m non-zeros) + abroad column; diversion ratios | `scripts/12_diversion.py` | analytic nested-logit derivatives summed over locations × income types | [calibrated] | `data/processed/jacobian.npz`, `assets/p1/m3/1_3_*.csv` |
 
 ## Key numbers from Phase 1 (for the appendix)
 - **Population:** 9,123,704 in 347,736 populated hectares → 32,388 shopper locations.

@@ -38,7 +38,7 @@ Legend: `[x]` done · `[ ]` to do · *(cut)* = first to drop if behind
 ## Phase 2 — Pillar 1: structural merger analysis (Sat PM – Sat night)
 - [x] Demand: spatial nested logit, income-varying α, drive time; nests full-service / discount / convenience / other (`src/mxc/structural/demand.py`, `scripts/10_demand.py`; 6 tests incl. exact match to textbook formulas and the toy)
 - [x] Calibrate to national shares (2025 sales shares; abroad 4.1% from MCS card data) and fit table (`scripts/11_calibrate.py`; exact fit, 679 iterations). Canton shares: none published, model canton table reported instead. Margins → supply step
-- [ ] Diversion ratios: store, banner, canton
+- [x] Diversion ratios: store, banner/player, canton + elasticities (`src/mxc/structural/substitution.py`, `scripts/12_diversion.py`; sparse analytic Jacobian 4,565², matches toy and autodiff)
 - [ ] Supply: cooperative objective (λμ), cost recovery
 - [ ] Koh-style no-price identification (revenue diversion + margins → GUPPI, CMCR)
 - [ ] Local GUPPIs + CMCR for every Migros/Denner–Coop overlap; flag vs 2.75% / 3.25%
