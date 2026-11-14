@@ -21,6 +21,7 @@ STEPS = [
     "24_t3_local.py",       # Pillar 2 step 5: T3 store-level elasticities (causal IV forest) + local GUPPIs [sim]
     "25_scorecard.py",     # Pillar 2 step 6: validation scorecard T1-T3 [sim]
     "26_border.py",        # Pillar 2 step 7: border evidence on real card data (COVID, duty-free 2025, franc) 
+    "30_experiments.py",   # Pillar 3 step 1: coupon A/B tests → uplift (T-learner) → α̂ per household [sim]
     # later steps append here: 20_screening.py, 30_simulation.py, ...
 ]
 

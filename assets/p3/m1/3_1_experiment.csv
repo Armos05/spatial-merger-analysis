@@ -1,0 +1,13 @@
+chain,segment,households,treated,ate_log_est,se,ate_log_true,mean_tau_true,trips_control_8wk
+Migros (Cumulus),all,15938,7998,0.2759,0.0109,0.2796,0.3013,2.2937
+Migros (Cumulus),price_hunter,3552,1797,0.5126,0.0259,0.4581,0.4786,1.5048
+Migros (Cumulus),border_shopper,1361,657,0.2487,0.0358,0.3258,0.3376,2.0653
+Migros (Cumulus),mainstream,5450,2737,0.2877,0.0177,0.2745,0.2802,2.1703
+Migros (Cumulus),convenience,2385,1201,0.2338,0.0211,0.2465,0.2531,3.6242
+Migros (Cumulus),quality,3190,1606,0.1194,0.0225,0.1588,0.1602,2.4861
+Coop (Supercard),all,14048,6954,0.2657,0.0116,0.2804,0.3075,2.2949
+Coop (Supercard),price_hunter,3117,1520,0.4158,0.0268,0.4645,0.4932,1.578
+Coop (Supercard),border_shopper,1202,580,0.3063,0.0383,0.3321,0.3499,1.9952
+Coop (Supercard),mainstream,4837,2390,0.2338,0.0187,0.2749,0.2836,2.2268
+Coop (Supercard),convenience,2118,1131,0.2507,0.0232,0.2484,0.2566,3.4813
+Coop (Supercard),quality,2774,1333,0.1291,0.024,0.1583,0.1611,2.5219

@@ -46,6 +46,7 @@ Last updated: 14 Nov 2026.
 | D20 | T3 store-level elasticities (national, banner, store-by-store IV, linear IV, causal IV forest), store features from public data, local GUPPIs with true diversion × estimated margins | `scripts/24_t3_local.py` | econml CausalIVForest on 2.4 DML residuals; Lerner margins m = p/|θ| | [sim] | `assets/p2/m5/2_5_*` |
 | D21 | Validation scorecard: bias, RMSE, relative error, 95% coverage of traditional vs modern alternative vs best data-driven method for T1, T2, T3 (local), T3 (GUPPI screen) | `scripts/25_scorecard.py` | collects 2.3-2.5 scorecards; relative error = RMSE / true scale | [sim] | `assets/p2/m6/2_6_*` |
 | D22 | Border evidence: model closure/franc predictions by canton, region, border band; MCS weekly debit food POS by Grossregion 2019-22; Worldline POS by canton 2021-26 | `scripts/26_border.py` | MCS (SIX, Worldline) + Pillar 1 model; randomisation inference; HAC dose-response; step-in/step-out for 2025 | [data] + [calibrated] | `assets/p2/m7/2_7_*` |
+| D23 | Coupon A/B tests on the loyalty panel, card-history features, uplift τ̂ and α̂ by data regime (location / own card / pooled) | `scripts/30_experiments.py` | T-learner (LightGBM Poisson, 5-fold) + inversion of the firm model | [sim] | `assets/p3/m1/3_1_*` |
 
 ## Key numbers from Phase 1 (for the appendix)
 - **Population:** 9,123,704 in 347,736 populated hectares → 32,388 shopper locations.
