@@ -1,0 +1,39 @@
+chain,group,regime,n,corr,rmse_rel,precision_top20,mean_hat_over_true
+Cumulus,all holders,location_only,15938,0.0254,0.6339,0.2108,
+Cumulus,all holders,own_card,15938,0.6681,0.4609,0.5941,
+Cumulus,all holders,pooled,15938,0.7116,0.4411,0.6324,
+Cumulus,hold both cards,location_only,11228,0.027,0.6343,0.2128,
+Cumulus,hold both cards,own_card,11228,0.6675,0.4621,0.5917,
+Cumulus,hold both cards,pooled,11228,0.731,0.4397,0.6496,
+Cumulus,hold only this card,location_only,4710,0.0216,0.6329,0.2049,
+Cumulus,hold only this card,own_card,4710,0.6693,0.4581,0.6019,
+Cumulus,hold only this card,pooled,4710,0.6714,0.4444,0.5966,
+Cumulus,segment price_hunter,own_card,3552,0.5524,0.3683,,1.1312
+Cumulus,segment price_hunter,pooled,3552,0.6284,0.3525,,1.1409
+Cumulus,segment border_shopper,own_card,1361,0.5223,0.4036,,0.9365
+Cumulus,segment border_shopper,pooled,1361,0.6145,0.3779,,0.9364
+Cumulus,segment mainstream,own_card,5450,0.4033,0.464,,1.0151
+Cumulus,segment mainstream,pooled,5450,0.4798,0.4447,,1.007
+Cumulus,segment convenience,own_card,2385,0.2735,0.5323,,0.9704
+Cumulus,segment convenience,pooled,2385,0.3527,0.5107,,0.9649
+Cumulus,segment quality,own_card,3190,0.1443,0.6559,,0.8253
+Cumulus,segment quality,pooled,3190,0.2276,0.6323,,0.8334
+Supercard,all holders,location_only,14048,-0.0144,0.6357,0.1879,
+Supercard,all holders,own_card,14048,0.6254,0.4527,0.5641,
+Supercard,all holders,pooled,14048,0.6529,0.4392,0.5726,
+Supercard,hold both cards,location_only,11269,-0.0248,0.6393,0.1818,
+Supercard,hold both cards,own_card,11269,0.6255,0.4546,0.5626,
+Supercard,hold both cards,pooled,11269,0.6775,0.428,0.5874,
+Supercard,hold only this card,location_only,2779,0.0276,0.6211,0.2068,
+Supercard,hold only this card,own_card,2779,0.6249,0.4448,0.5737,
+Supercard,hold only this card,pooled,2779,0.5495,0.4812,0.5252,
+Supercard,segment price_hunter,own_card,3117,0.5387,0.328,,0.957
+Supercard,segment price_hunter,pooled,3117,0.5546,0.3241,,0.9566
+Supercard,segment border_shopper,own_card,1202,0.4531,0.4239,,0.8672
+Supercard,segment border_shopper,pooled,1202,0.478,0.416,,0.8848
+Supercard,segment mainstream,own_card,4837,0.3389,0.4855,,0.8376
+Supercard,segment mainstream,pooled,4837,0.3965,0.4679,,0.8386
+Supercard,segment convenience,own_card,2118,0.3883,0.5102,,1.0422
+Supercard,segment convenience,pooled,2118,0.461,0.4798,,1.0438
+Supercard,segment quality,own_card,2774,0.168,0.6693,,0.8295
+Supercard,segment quality,pooled,2774,0.2276,0.6522,,0.8002
