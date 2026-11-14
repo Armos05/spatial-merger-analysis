@@ -9,6 +9,7 @@ STEPS = [
     "10_demand.py",        # Pillar 1 step 1: choice sets, income types, demand at priors
     "11_calibrate.py",     # Pillar 1 step 2: delta fitted to 2025 sales shares + card-data abroad share
     "12_diversion.py",     # Pillar 1 step 3: store Jacobian, diversion (store, player, canton), elasticities
+    "13_supply.py",        # Pillar 1 step 4: cooperative conduct λμ and marginal costs from 2024 accounts
     # later steps append here: 20_screening.py, 30_simulation.py, ...
 ]
 

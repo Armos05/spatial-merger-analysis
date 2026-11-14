@@ -17,6 +17,7 @@ Last updated: 14 Nov 2026.
 | R8 | Card spending at Swiss merchants by canton; by cardholder origin × category | MCS, Worldline acquiring data | daily, 2019-01-01 to 2026-11-08 | free use, cite MCS / Worldline | [real] | `data/raw/mcs/ACQ_*.csv` |
 | R10 | Calibration targets: domestic food-retail sales shares 2025: Migros 33.5%, Migros group incl. Denner 42.6% (so Denner ≈ 9.1%), Coop 33.7%, Lidl 8.4%, Aldi 7.3%, others ≈ 8% (residual) | watson.ch, 29 Oct 2026 ("Marktanteile"; source not named) | 2025 | press | [real], source unnamed | `assets/p1/m2/1_2_targets.csv` (step 1.2) |
 | R11 | Cross-check, 2025 sales (CHF bn): Migros supermarkets incl. online 12.65; Denner 3.85; Coop supermarkets incl. coop.ch 12.40; Aldi ≈ 2.5 and Lidl ≈ 2.7 (2024 NielsenIQ estimates) | Migros and Coop annual reports 2025; NielsenIQ via watson (7 Feb 2026), relayed by rappn.ch | 2024–25 | public reports / press | [real] / [estimate] | same |
+| R12 | 2024 income statements: Genossenschaft Migros Ostschweiz (sales 2,484.6, goods & services 1,643.0, staff 448.5 CHF m); Coop group consolidated (sales 33,719, goods 22,765, staff 5,963 CHF m) | GMOS and Coop-Gruppe Geschäftsberichte 2024 | 2024 | public annual reports | [real] | `assets/p1/m4/1_4_accounts.csv` |
 | R9 | Published store counts (validation) | Blick, blue News, cash.ch, Statista (see table file) | 2025–Feb 2026 | press | [real] | `outputs/tables/store_count_validation.csv` |
 
 ## Derived datasets
@@ -33,6 +34,7 @@ Last updated: 14 Nov 2026.
 | D8 | Demand market: 5.31 m location–store pairs ≤ 25 min, 7 income types per location, 4.27 m households | `scripts/10_demand.py` | flat pair arrays sorted by location; 147 locations without a store in reach dropped | [real] inputs | `data/processed/market.npz` |
 | D9 | Calibrated demand parameters (δ per banner) and local shares | `scripts/11_calibrate.py` | Berry contraction on revenue shares; 679 iterations to 1e−10 | [calibrated] | `assets/p1/m2/1_2_params.json`, `1_2_*.csv` |
 | D10 | Store Jacobian dq_k/dp_j (4,565 × 4,565 sparse, 4.26 m non-zeros) + abroad column; diversion ratios | `scripts/12_diversion.py` | analytic nested-logit derivatives summed over locations × income types | [calibrated] | `data/processed/jacobian.npz`, `assets/p1/m3/1_3_*.csv` |
+| D11 | λμ, banner markups and marginal costs; store-level "price alone" margins | `scripts/13_supply.py` | banner FOCs m = −(Ω∘A)⁻¹(1−λμ)Q | [calibrated] | `assets/p1/m4/1_4_*` |
 
 ## Key numbers from Phase 1 (for the appendix)
 - **Population:** 9,123,704 in 347,736 populated hectares → 32,388 shopper locations.
@@ -63,4 +65,6 @@ Last updated: 14 Nov 2026.
 | A7 Demand priors | α_ref 0.03, η 0.5, γ 0.06/min, κ 0.04/min, σ 0.25 | σ 0–0.6, η 0–1, γ/α CHF 1–3 per min; δ calibrated in step 2 |
 | A9 Abroad share of grocery spending | 4.06%: Swiss debit-card food-retail spending in DE/FR/IT/AT ÷ (that + domestic), 2022 (MCS/SIX) | 3–8%: debit only (cash and euro cards missed), holiday purchases included; 2019 = 4.9% |
 | A10 Banners within a player share one δ | Migros = Migros + Partner + Migrolino; Coop = Coop + Pronto; Others = Volg + Landi + Spar + Manor | split within a player comes from price and geography; test format offsets later |
+| A11 Price-cost margin from accounts | (sales − goods − 0.5 × staff) / sales: Migros 24.9%, Coop 23.6% | staff share variable 0–1 → margins 16–34% → λμ 0.05–0.59 |
+| A12 Conduct | one λμ for both cooperatives (fitted to Migros); rivals incl. fenaco λμ = 0; uniform national banner prices | firm-specific λμ (Coop alone 0.310) |
 | A8 Income types | ESTV taxpayer classes merged into 7; representative incomes 20k, 35k, 45k, 62.5k, 87.5k, 150k, 300k | top-class value 200k–500k |
