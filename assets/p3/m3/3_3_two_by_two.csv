@@ -1,0 +1,14 @@
+item,value
+U-C (status quo),0.0
+"U-M (merger, uniform prices)",-602.57
+"P-C (personalised, competition, own data)",-211.27
+"P-M (personalised, merger, pooled data)",-816.32
+personalisation under competition: P-C − U-C,-211.27
+personalisation after the merger: P-M − U-M,-213.75
+interaction I = (P-M − U-M) − (P-C − U-C),-2.47
+"  of which: rival gone, same data (ring-fenced − U-M) − (P-C − U-C)",25.16
+  of which: pooling the cards (P-M − ring-fenced),-27.63
+location-only targeting after merger (P-M location − U-M),-21.62
+oracle: personalisation under competition,-124.07
+oracle: personalisation after merger,-173.94
+oracle: interaction,-49.87

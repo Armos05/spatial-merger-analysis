@@ -91,6 +91,14 @@ def chain_share(theta, ah, base, alpha_h, mM, mC, side):
 
 
 # ----------------------------------------------------------------------------- equilibrium
+def proj_grad(mM, mC, gM, gC, hM, hC, lo, hi):
+    """Largest first-order violation (KKT): a household at a bound with the gradient pushing outward is optimal."""
+    def pg(m, g, h):
+        free = ~(((m >= hi - 1e-9) & (g > 0)) | ((m <= lo + 1e-9) & (g < 0)))
+        return jnp.max(jnp.abs(jnp.where(h & free, g, 0.0)))
+    return float(pg(mM, gM, hM) + pg(mC, gC, hC))
+
+
 def solve(theta, ah, base, cost, lm, alpha_M, alpha_C, merged: bool, iters=200, step_max=0.05,
           lo=0.6, hi=2.0, tol=1e-7):
     """Personalised multipliers. Competition: firm M believes alpha_M, firm C believes alpha_C (Nash).
@@ -126,13 +134,13 @@ def solve(theta, ah, base, cost, lm, alpha_M, alpha_C, merged: bool, iters=200, 
             ok = (hMM < 0) & (det > 0)
             dM = jnp.where(ok, -(hCC * gM - hMC * gC) / det, 0.01 * jnp.sign(gM))
             dC = jnp.where(ok, -(-hMC * gM + hMM * gC) / det, 0.01 * jnp.sign(gC))
-            gmax = float(jnp.max(jnp.abs(jnp.where(hM, gM, 0))) + jnp.max(jnp.abs(jnp.where(hC, gC, 0))))
+            gmax = proj_grad(mM, mC, gM, gC, hM, hC, lo, hi)
         else:
             gM, _, hMM, _, _, _ = gfun(mM, mC, alpha_M, "M")
             _, gC, _, _, _, hCC = gfun(mM, mC, alpha_C, "C")
             dM = jnp.where(hMM < 0, -gM / jnp.where(hMM < 0, hMM, -1.0), 0.01 * jnp.sign(gM))
             dC = jnp.where(hCC < 0, -gC / jnp.where(hCC < 0, hCC, -1.0), 0.01 * jnp.sign(gC))
-            gmax = float(jnp.max(jnp.abs(jnp.where(hM, gM, 0))) + jnp.max(jnp.abs(jnp.where(hC, gC, 0))))
+            gmax = proj_grad(mM, mC, gM, gC, hM, hC, lo, hi)
         dM = jnp.where(hM, jnp.clip(dM, -step_max, step_max), 0.0)
         dC = jnp.where(hC, jnp.clip(dC, -step_max, step_max), 0.0)
         mM, mC = jnp.clip(mM + dM, lo, hi), jnp.clip(mC + dC, lo, hi)
@@ -148,8 +156,9 @@ def evaluate(theta, ah_true, base, cost, lm, alpha_true, mM, mC):
     s, s0, _ = hh_logit(theta, ah_true, p, alpha_true)
     H = alpha_true.shape[0]
     paid = jax.ops.segment_sum(s * p, ah_true["pair_loc"], num_segments=H) + s0 * theta.p_abroad
+    pi_all = jax.ops.segment_sum(s * (p - cost[ah_true["banner_pair"]]), ah_true["pair_loc"], num_segments=H)
     return pd.DataFrame({"cs": np.asarray(cs), "profit_M": np.asarray(piM), "profit_C": np.asarray(piC),
-                         "avg_price_paid": np.asarray(paid)})
+                         "profit_other": np.asarray(pi_all - piM - piC), "avg_price_paid": np.asarray(paid)})
 
 
 # ----------------------------------------------------------------------------- experiment → α̂

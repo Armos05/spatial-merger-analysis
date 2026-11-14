@@ -23,6 +23,7 @@ STEPS = [
     "26_border.py",        # Pillar 2 step 7: border evidence on real card data (COVID, duty-free 2025, franc) 
     "30_experiments.py",   # Pillar 3 step 1: coupon A/B tests → uplift (T-learner) → α̂ per household [sim]
     "31_prediction.py",    # Pillar 3 step 2: prediction quality, Cumulus only vs pooled; learning curve [sim]
+    "32_pricing.py",       # Pillar 3 step 3: {uniform, personal} × {competition, merger}; interaction [sim]
     # later steps append here: 20_screening.py, 30_simulation.py, ...
 ]
 

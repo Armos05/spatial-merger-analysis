@@ -1,0 +1,49 @@
+scenario,by,group,households,dcs_year,extra_vs_uniform_merger
+U-M,segment,border_shopper,1733,-541.362,0.0
+U-M,segment,convenience,2997,-655.206,0.0
+U-M,segment,mainstream,6871,-608.444,0.0
+U-M,segment,price_hunter,4450,-429.463,0.0
+U-M,segment,quality,3949,-774.353,0.0
+U-M,income_type,20000.0,4874,-459.622,0.0
+U-M,income_type,35000.0,1574,-550.922,0.0
+U-M,income_type,45000.0,2080,-589.988,0.0
+U-M,income_type,62500.0,4708,-632.539,0.0
+U-M,income_type,87500.0,2817,-670.574,0.0
+U-M,income_type,150000.0,3296,-713.391,0.0
+U-M,income_type,300000.0,651,-765.93,0.0
+P-C,segment,border_shopper,1733,-50.221,491.142
+P-C,segment,convenience,2997,-196.331,458.875
+P-C,segment,mainstream,6871,-144.177,464.267
+P-C,segment,price_hunter,4450,120.618,550.08
+P-C,segment,quality,3949,-784.022,-9.669
+P-C,income_type,20000.0,4874,17.926,477.548
+P-C,income_type,35000.0,1574,-75.12,475.802
+P-C,income_type,45000.0,2080,-137.99,451.998
+P-C,income_type,62500.0,4708,-210.339,422.2
+P-C,income_type,87500.0,2817,-335.513,335.06
+P-C,income_type,150000.0,3296,-463.524,249.866
+P-C,income_type,300000.0,651,-682.575,83.355
+P-M,segment,border_shopper,1733,-561.604,-20.242
+P-M,segment,convenience,2997,-821.957,-166.751
+P-M,segment,mainstream,6871,-730.029,-121.585
+P-M,segment,price_hunter,4450,-266.178,163.284
+P-M,segment,quality,3949,-1693.898,-919.545
+P-M,income_type,20000.0,4874,-392.892,66.73
+P-M,income_type,35000.0,1574,-574.293,-23.371
+P-M,income_type,45000.0,2080,-684.459,-94.471
+P-M,income_type,62500.0,4708,-826.417,-193.878
+P-M,income_type,87500.0,2817,-1033.213,-362.639
+P-M,income_type,150000.0,3296,-1266.862,-553.471
+P-M,income_type,300000.0,651,-1700.327,-934.397
+P-M ring-fenced,segment,border_shopper,1733,-548.456,-7.094
+P-M ring-fenced,segment,convenience,2997,-810.821,-155.615
+P-M ring-fenced,segment,mainstream,6871,-707.443,-98.999
+P-M ring-fenced,segment,price_hunter,4450,-263.732,165.731
+P-M ring-fenced,segment,quality,3949,-1610.235,-835.882
+P-M ring-fenced,income_type,20000.0,4874,-398.21,61.412
+P-M ring-fenced,income_type,35000.0,1574,-567.273,-16.351
+P-M ring-fenced,income_type,45000.0,2080,-673.94,-83.952
+P-M ring-fenced,income_type,62500.0,4708,-800.431,-167.892
+P-M ring-fenced,income_type,87500.0,2817,-984.179,-313.606
+P-M ring-fenced,income_type,150000.0,3296,-1203.608,-490.217
+P-M ring-fenced,income_type,300000.0,651,-1582.566,-816.636

@@ -48,6 +48,7 @@ Last updated: 14 Nov 2026.
 | D22 | Border evidence: model closure/franc predictions by canton, region, border band; MCS weekly debit food POS by Grossregion 2019-22; Worldline POS by canton 2021-26 | `scripts/26_border.py` | MCS (SIX, Worldline) + Pillar 1 model; randomisation inference; HAC dose-response; step-in/step-out for 2025 | [data] + [calibrated] | `assets/p2/m7/2_7_*` |
 | D23 | Coupon A/B tests on the loyalty panel, card-history features, uplift τ̂ and α̂ by data regime (location / own card / pooled) | `scripts/30_experiments.py` | T-learner (LightGBM Poisson, 5-fold) + inversion of the firm model | [sim] | `assets/p3/m1/3_1_*` |
 | D24 | Prediction quality of α̂ by regime and household group; learning curve by weeks of history | `scripts/31_prediction.py` | correlation, relative RMSE, precision at top 20%, calibration deciles | [sim] | `assets/p3/m2/3_2_*` |
+| D25 | Personalised pricing scenarios per household (uniform/personal × competition/merger, ring-fenced, address-only, perfect data) | `scripts/32_pricing.py` | Nash / joint Newton per household on the firm belief model; truth evaluation | [sim] | `assets/p3/m3/3_3_*` |
 
 ## Key numbers from Phase 1 (for the appendix)
 - **Population:** 9,123,704 in 347,736 populated hectares → 32,388 shopper locations.
