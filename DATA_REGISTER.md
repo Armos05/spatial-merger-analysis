@@ -15,7 +15,7 @@ Last updated: 14 Nov 2026.
 | R6 | Income distribution by municipality: taxpayers in 10 net-income classes, total net and taxable income | ESTV, direct federal tax statistics, natural persons, municipalities, file 500 (all taxpayers, normal cases) | tax year 2023 (published 5 Nov 2026) | federal open data | [real] | `data/raw/estv/statistik-dbst-np-gemeinden-2023-500.xlsx` |
 | R7 | Swiss debit-card spending by country (DEU/FRA/ITA/AUT) × merchant category; domestic by merchant canton | Monitoring Consumption Switzerland (HSG), SIX issuing data | daily, 2019-01-01 to 2023-01-01 | free use, cite MCS / SIX | [real] | `data/raw/mcs/DEBIT_*.csv` |
 | R8 | Card spending at Swiss merchants by canton; by cardholder origin × category | MCS, Worldline acquiring data | daily, 2019-01-01 to 2026-11-08 | free use, cite MCS / Worldline | [real] | `data/raw/mcs/ACQ_*.csv` |
-| R10 | Calibration targets: domestic food-retail sales shares 2025: Migros 33.5%, Migros group incl. Denner 42.6% (so Denner ≈ 9.1%), Coop 33.7%, Lidl 8.4%, Aldi 7.3%, others ≈ 8% (residual) | watson.ch, 29 Oct 2026 ("Marktanteile"; source not named) | 2025 | press | [real], source unnamed | `assets/p1/1_2_targets.csv` (step 1.2) |
+| R10 | Calibration targets: domestic food-retail sales shares 2025: Migros 33.5%, Migros group incl. Denner 42.6% (so Denner ≈ 9.1%), Coop 33.7%, Lidl 8.4%, Aldi 7.3%, others ≈ 8% (residual) | watson.ch, 29 Oct 2026 ("Marktanteile"; source not named) | 2025 | press | [real], source unnamed | `assets/p1/m2/1_2_targets.csv` (step 1.2) |
 | R11 | Cross-check, 2025 sales (CHF bn): Migros supermarkets incl. online 12.65; Denner 3.85; Coop supermarkets incl. coop.ch 12.40; Aldi ≈ 2.5 and Lidl ≈ 2.7 (2024 NielsenIQ estimates) | Migros and Coop annual reports 2025; NielsenIQ via watson (7 Feb 2026), relayed by rappn.ch | 2024–25 | public reports / press | [real] / [estimate] | same |
 | R9 | Published store counts (validation) | Blick, blue News, cash.ch, Statista (see table file) | 2025–Feb 2026 | press | [real] | `outputs/tables/store_count_validation.csv` |
 
@@ -31,7 +31,7 @@ Last updated: 14 Nov 2026.
 | D6 | Drive time to nearest border crossing per location | `02_geography.py` | 284 road crossings (edges crossing the national boundary; Liechtenstein and Büsingen excluded as they are in the Swiss customs area); multi-source Dijkstra | [real] / [assumed] speeds | column `border_min` in D3 |
 | D7 | Detour factor (road km / straight km) | `02_geography.py` | 82,304 sampled location–store pairs 2–25 km apart | [real] | `outputs/tables/detour_factor.csv` |
 | D8 | Demand market: 5.31 m location–store pairs ≤ 25 min, 7 income types per location, 4.27 m households | `scripts/10_demand.py` | flat pair arrays sorted by location; 147 locations without a store in reach dropped | [real] inputs | `data/processed/market.npz` |
-| D9 | Calibrated demand parameters (δ per banner) and local shares | `scripts/11_calibrate.py` | Berry contraction on revenue shares; 679 iterations to 1e−10 | [calibrated] | `assets/p1/1_2_params.json`, `1_2_*.csv` |
+| D9 | Calibrated demand parameters (δ per banner) and local shares | `scripts/11_calibrate.py` | Berry contraction on revenue shares; 679 iterations to 1e−10 | [calibrated] | `assets/p1/m2/1_2_params.json`, `1_2_*.csv` |
 
 ## Key numbers from Phase 1 (for the appendix)
 - **Population:** 9,123,704 in 347,736 populated hectares → 32,388 shopper locations.

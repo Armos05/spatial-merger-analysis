@@ -7,13 +7,13 @@ scale. Banner qualities delta are still 0 here; step 2 (11_calibrate.py) fits th
 Run:  conda activate keystone && python scripts/10_demand.py
 Outputs:
   data/processed/market.npz            choice-set arrays (input to every later Pillar 1 step)
-  assets/p1/1_1_market_summary.csv     size of the market and the choice sets
-  assets/p1/1_1_overlap.csv            households reaching Migros-group and Coop-group stores
-  assets/p1/1_1_prior_shares.csv       national shares at prior parameters, delta = 0 [uncalibrated]
-  assets/p1/1_1_store_map.png          where each group's stores are
-  assets/p1/1_1_overlap_map.png        where only the merging groups are in reach
-  assets/p1/1_1_reach.png              households within x minutes of each group
-  assets/p1/1_1_income_map.png         median taxable-unit net income by municipality (drives alpha)
+  assets/p1/m1/1_1_market_summary.csv     size of the market and the choice sets
+  assets/p1/m1/1_1_overlap.csv            households reaching Migros-group and Coop-group stores
+  assets/p1/m1/1_1_prior_shares.csv       national shares at prior parameters, delta = 0 [uncalibrated]
+  assets/p1/m1/1_1_store_map.png          where each group's stores are
+  assets/p1/m1/1_1_overlap_map.png        where only the merging groups are in reach
+  assets/p1/m1/1_1_reach.png              households within x minutes of each group
+  assets/p1/m1/1_1_income_map.png         median taxable-unit net income by municipality (drives alpha)
 """
 import sys
 import time
@@ -34,7 +34,7 @@ from mxc import viz  # noqa: E402
 from mxc.structural import demand as dm  # noqa: E402
 
 PROCESSED, INTERIM = ROOT / "data/processed", ROOT / "data/interim"
-OUT = ROOT / "assets/p1"
+OUT = ROOT / "assets/p1/m1"
 SRC = "Sources: OpenStreetMap (ODbL), FSO STATPOP 2024, ESTV 2023; own road-network drive times."
 GROUPS = {"Migros group": ["Migros"], "Coop group": ["Coop"], "Aldi + Lidl": ["Aldi", "Lidl"]}
 

@@ -1,7 +1,7 @@
 """Phase 2 step 2: calibrate banner qualities delta to 2025 sales shares and the card-data abroad share.
 
 Run:  conda activate keystone && python scripts/11_calibrate.py      (needs 10_demand.py first)
-Outputs (assets/p1/):
+Outputs (assets/p1/m2/):
   1_2_abroad_share.csv      Swiss debit-card grocery spending abroad vs at home, 2019-2022 (MCS)
   1_2_targets.csv           shares of total grocery spending used as targets
   1_2_fit.csv               target vs model after calibration
@@ -32,7 +32,7 @@ from mxc.structural import calibrate as cb  # noqa: E402
 from mxc.structural import demand as dm  # noqa: E402
 
 PROCESSED, INTERIM, RAW = ROOT / "data/processed", ROOT / "data/interim", ROOT / "data/raw"
-OUT = ROOT / "assets/p1"
+OUT = ROOT / "assets/p1/m2"
 ABROAD_YEAR = 2022   # latest full year; 2019-21 are distorted by the cash-to-card shift and COVID
 MERGING = ["Migros", "Migros Partner", "Migrolino", "Denner", "Coop", "Coop Pronto"]
 SRC = "Sources: OpenStreetMap, FSO STATPOP 2024, ESTV 2023, MCS/SIX debit data, watson.ch (2025 shares)."

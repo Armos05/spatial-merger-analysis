@@ -28,8 +28,8 @@ def setup():
 
 
 def save(fig, pillar: int, step: str, name: str):
-    """assets/p{pillar}/{step}_{name}.png, e.g. assets/p1/1_1_overlap_map.png"""
-    out = ASSETS / f"p{pillar}" / f"{step}_{name}.png"
+    """assets/p{pillar}/m{module}/{step}_{name}.png, e.g. assets/p1/m1/1_1_overlap_map.png (step "1_1" -> m1)"""
+    out = ASSETS / f"p{pillar}" / f"m{step.split('_')[1]}" / f"{step}_{name}.png"
     out.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out, bbox_inches="tight")
     plt.close(fig)
