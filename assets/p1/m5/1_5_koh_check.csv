@@ -1,0 +1,8 @@
+banner,guppi_price_index,guppi_no_prices,lambda_mu_no_prices,corr_store_level
+Coop,0.1033,0.1069,0.3561,0.9756
+Coop Pronto,0.0975,0.1119,0.3561,0.9756
+Denner,0.0561,0.0539,0.3561,0.9756
+Migrolino,0.0654,0.077,0.3561,0.9756
+Migros,0.0774,0.0827,0.3561,0.9756
+Migros Partner,0.0816,0.0885,0.3561,0.9756
+all stores,0.0799,0.0861,0.3561,0.9756
