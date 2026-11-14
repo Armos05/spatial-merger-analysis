@@ -1,0 +1,36 @@
+name: keystone
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  # core numerics
+  - numpy
+  - scipy
+  - pandas
+  - pyarrow
+  - openpyxl
+  - jax
+  - jaxlib
+  # geo
+  - geopandas
+  - shapely
+  - pyproj
+  - h3-py
+  - osmnx
+  - pyosmium          # reads the OSM .pbf locally (no osmium-tool / Docker needed)
+  # econometrics / causal / ML
+  - statsmodels
+  - scikit-learn
+  - econml
+  - linearmodels
+  # plotting
+  - matplotlib
+  - contextily        # basemaps for maps
+  # tooling
+  - pytest
+  - ipykernel
+  - tqdm
+  - pip
+  - pip:
+      - pyfixest        # fast fixed-effects / event-study / DiD

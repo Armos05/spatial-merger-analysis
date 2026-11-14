@@ -1,0 +1,18 @@
+data/raw/
+data/interim/
+data/processed/
+references/*.pdf
+
+# Python / tooling
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Personal study notes (kept local)
+design_dummy.md
+LEARNING_MODULES.md
+EGK_SELF_TEST.md
+DESIGN_v0.1_archive.md
+toys/
