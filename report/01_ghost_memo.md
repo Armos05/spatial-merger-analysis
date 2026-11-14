@@ -5,7 +5,7 @@ Labels used throughout: **[real]** public data · **[calibrated]** fitted to pub
 
 ---
 
-**PRIVILEGED & CONFIDENTIAL: PREPARED AT THE REQUEST OF COUNSEL** *(hypothetical engagement; case study on public data)*
+**DRAFT: hypothetical engagement** *(case study on public data)*
 
 **To:** External antitrust counsel to Migros-Genossenschafts-Bund
 **From:** [Author], economic advisory team
