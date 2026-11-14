@@ -99,6 +99,14 @@ u_i0h = δ_0 + β × gap_t − κ × border_time_h + ε_i0h
 ```
 Outputs: store-level and banner-level elasticities, **local diversion ratios** D(j→k) for every store pair.
 
+**As implemented (Phase 2 step 1, 14 Nov).**
+- *Income types.* Each location's households are split into 7 income types using its municipality's ESTV 2023 taxpayer distribution (<30k, 30–40k, 40–50k, 50–75k, 75–100k, 100–200k, 200k+). Integrating over the real income distribution is the "light random coefficient".
+- *Price sensitivity.* We use α_r = α_ref × (y_r / 62,500)^(−η) rather than linear in income, which keeps α > 0 for the top class. η = 0 means no income effect; η = 1 means α ∝ 1/income.
+- *Travel.* Network drive times are used directly, with no detour factor. The choice set is every store within 25 min.
+- *Excluded.* 147 locations (1,633 households, 0.04%) with no store within 25 min.
+- *ξ_j.* Set to 0 for now. A hook exists for store-format effects.
+- *Prices.* Banner basket index with Migros = 100, all [assumed]; abroad = 70 (see DATA_REGISTER A6).
+
 ### 3.3 Supply — cooperative conduct
 ```
 W_f = Profit_f + λ_f × μ_f × CS

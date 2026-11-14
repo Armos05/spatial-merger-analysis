@@ -6,7 +6,8 @@ from pathlib import Path
 STEPS = [
     "01_osm_extract.py",   # stores, boundaries, store counts by canton
     "02_geography.py",     # shopper locations, income, drive times, border times, detour check
-    # later phases append here: 10_demand.py, 20_screening.py, 30_simulation.py, ...
+    "10_demand.py",        # Pillar 1 step 1: choice sets, income types, demand at priors
+    # later steps append here: 11_calibrate.py, 20_screening.py, 30_simulation.py, ...
 ]
 
 here = Path(__file__).parent

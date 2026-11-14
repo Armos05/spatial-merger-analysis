@@ -1,0 +1,12 @@
+item,value
+shopper locations,32241.0
+locations dropped (no store within 25 min),147.0
+households dropped,1633.0
+households in market,4268686.0
+stores (12 banners),4565.0
+location-store pairs (<= 25 min),5309774.0
+"stores in reach, household median",226.0
+"stores in reach, household p10",62.0
+"nearest store minutes, household median",1.0
+"nearest store minutes, household p90",4.0
+"border minutes, household median",29.7

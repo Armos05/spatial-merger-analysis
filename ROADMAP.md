@@ -36,7 +36,7 @@ Legend: `[x]` done · `[ ]` to do · *(cut)* = first to drop if behind
 - [x] Data register (`DATA_REGISTER.md`)
 
 ## Phase 2 — Pillar 1: structural merger analysis (Sat PM – Sat night)
-- [ ] Demand: spatial nested logit, income-varying α, drive time; nests full-service / discount / other
+- [x] Demand: spatial nested logit, income-varying α, drive time; nests full-service / discount / convenience / other (`src/mxc/structural/demand.py`, `scripts/10_demand.py`; 6 tests incl. exact match to textbook formulas and the toy)
 - [ ] Calibrate to national shares (+ canton shares where available) and margins; fit table
 - [ ] Diversion ratios: store, banner, canton
 - [ ] Supply: cooperative objective (λμ), cost recovery

@@ -28,6 +28,7 @@ Last updated: 14 Nov 2026.
 | D5 | Drive times location → store, all pairs ≤ 25 min (5.3 m pairs) | `02_geography.py` | Dijkstra on R3 with free-flow speeds by road class | geometry [real], speeds [assumed] | `data/processed/drive_times.parquet` |
 | D6 | Drive time to nearest border crossing per location | `02_geography.py` | 284 road crossings (edges crossing the national boundary; Liechtenstein and Büsingen excluded as they are in the Swiss customs area); multi-source Dijkstra | [real] / [assumed] speeds | column `border_min` in D3 |
 | D7 | Detour factor (road km / straight km) | `02_geography.py` | 82,304 sampled location–store pairs 2–25 km apart | [real] | `outputs/tables/detour_factor.csv` |
+| D8 | Demand market: 5.31 m location–store pairs ≤ 25 min, 7 income types per location, 4.27 m households | `scripts/10_demand.py` | flat pair arrays sorted by location; 147 locations without a store in reach dropped | [real] inputs | `data/processed/market.npz` |
 
 ## Key numbers from Phase 1 (for the appendix)
 - **Population:** 9,123,704 in 347,736 populated hectares → 32,388 shopper locations.
@@ -54,3 +55,6 @@ Last updated: 14 Nov 2026.
 | A3 Taxpayer ≈ household | married couples file jointly | compare with STATPOP households (HPTOT) |
 | A4 Oneway restrictions | ignored | — (small effect on minutes) |
 | A5 OSM completeness | Denner partners under-mapped (−6%) | reweight Denner by published count |
+| A6 Basket price index (Migros = 100) | Migros Partner 103, Coop 102, Denner 88, Aldi 85, Lidl 85, Migrolino 115, Coop Pronto 115, Volg 108, Landi 100, Spar 108, Manor 110; abroad 70 | ±5 per banner; abroad 60–80. Screening (Koh 2025) needs only margins and revenue diversion |
+| A7 Demand priors | α_ref 0.03, η 0.5, γ 0.06/min, κ 0.04/min, σ 0.25 | σ 0–0.6, η 0–1, γ/α CHF 1–3 per min; δ calibrated in step 2 |
+| A8 Income types | ESTV taxpayer classes merged into 7; representative incomes 20k, 35k, 45k, 62.5k, 87.5k, 150k, 300k | top-class value 200k–500k |
