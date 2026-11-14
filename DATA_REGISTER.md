@@ -37,6 +37,7 @@ Last updated: 14 Nov 2026.
 | D11 | λμ, banner markups and marginal costs; store-level "price alone" margins | `scripts/13_supply.py` | banner FOCs m = −(Ω∘A)⁻¹(1−λμ)Q | [calibrated] | `assets/p1/m4/1_4_*` |
 | D12 | Store and national GUPPI / CMCR screens; Koh no-price robustness | `scripts/14_screening.py` | GUPPI = Σ D × m / p over the other party; CMCR from joint post-merger FOCs | [calibrated] | `assets/p1/m5/1_5_*` |
 | D13 | Post-merger equilibrium prices, shares, ΔCS by location / canton / income type, Δprofits | `scripts/15_simulation.py` | damped fixed point on banner FOCs; ΔCS = Δlogsum / α | [calibrated] | `assets/p1/m6/1_6_*` |
+| D14 | Scenario grid: 5 efficiency levels × 3 λμ cases (15 equilibria) | `scripts/16_scenarios.py` | same solver as D13 | [calibrated] | `assets/p1/m7/1_7_*` |
 
 ## Key numbers from Phase 1 (for the appendix)
 - **Population:** 9,123,704 in 347,736 populated hectares → 32,388 shopper locations.
