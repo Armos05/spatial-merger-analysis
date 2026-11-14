@@ -1,0 +1,8 @@
+region,pred_closure_pct,pred_demeaned_pct,pred_scaled_pct,observed_closure_minus_pre_pct,slope_without_region
+Lake Geneva,8.1451,1.6147,1.5472,-5.2368,1.6775
+Espace Mittelland,4.7595,-1.771,-1.697,-5.0676,1.4731
+Northwestern,5.9169,-0.6136,-0.5879,2.911,1.5531
+Zurich,2.359,-4.1715,-3.9973,-7.3733,1.4616
+Eastern,9.5616,3.0311,2.9045,3.1007,1.5865
+Central,1.8488,-4.6817,-4.4862,-2.9958,1.837
+Ticino,13.1225,6.592,6.3166,14.6618,0.7768

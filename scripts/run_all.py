@@ -20,6 +20,7 @@ STEPS = [
     "23_t2_elasticity.py",  # Pillar 2 step 4: T2 elasticities — OLS vs IV vs DML-PLR vs DML-PLIV [sim]
     "24_t3_local.py",       # Pillar 2 step 5: T3 store-level elasticities (causal IV forest) + local GUPPIs [sim]
     "25_scorecard.py",     # Pillar 2 step 6: validation scorecard T1-T3 [sim]
+    "26_border.py",        # Pillar 2 step 7: border evidence on real card data (COVID, duty-free 2025, franc) 
     # later steps append here: 20_screening.py, 30_simulation.py, ...
 ]
 
