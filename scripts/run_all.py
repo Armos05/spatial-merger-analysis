@@ -18,6 +18,7 @@ STEPS = [
     "21_events_loyalty.py",  # Pillar 2 step 2: Aldi/Lidl openings, Spar closures, loyalty-card panel [sim]
     "22_t1_entry.py",       # Pillar 2 step 3: T1 entry analysis — TWFE vs stacked event study vs pooled exposure [sim]
     "23_t2_elasticity.py",  # Pillar 2 step 4: T2 elasticities — OLS vs IV vs DML-PLR vs DML-PLIV [sim]
+    "24_t3_local.py",       # Pillar 2 step 5: T3 store-level elasticities (causal IV forest) + local GUPPIs [sim]
     # later steps append here: 20_screening.py, 30_simulation.py, ...
 ]
 

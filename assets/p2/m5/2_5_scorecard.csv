@@ -1,0 +1,6 @@
+method,rmse,bias,corr,calibration_slope,share_within_0.25,coverage_95
+national,0.3213,0.0771,,,0.5336,
+banner,0.2409,0.0769,0.6824,1.0585,0.8151,
+store-by-store IV,0.5286,0.005,0.5029,0.2565,0.3954,0.9165
+linear IV,0.273,0.079,0.5466,0.9623,0.6375,
+causal forest,0.18,0.0781,0.8615,1.15,0.901,0.4848
