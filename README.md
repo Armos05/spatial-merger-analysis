@@ -14,8 +14,6 @@ Can the acquirer buy the target and get it cleared? If so, which local areas rai
 
 ## Repository layout
 ```
-DESIGN.md            design of the analysis
-ROADMAP.md           build plan, ticked step by step
 DATA_REGISTER.md     every input: source, licence, label ([real] / [calibrated] / [assumed] / [sim])
 report/              engagement brief and memo
 src/mxc/             package: data, structural, twin, causal, datamerger, extensions

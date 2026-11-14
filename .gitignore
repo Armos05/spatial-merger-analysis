@@ -19,3 +19,5 @@ toys/
 
 # Personal reference notes inside assets (kept local)
 assets/**/*.md
+ROADMAP.md
+DESIGN.md
