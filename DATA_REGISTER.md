@@ -38,6 +38,7 @@ Last updated: 14 Nov 2026.
 | D12 | Store and national GUPPI / CMCR screens; Koh no-price robustness | `scripts/14_screening.py` | GUPPI = Σ D × m / p over the other party; CMCR from joint post-merger FOCs | [calibrated] | `assets/p1/m5/1_5_*` |
 | D13 | Post-merger equilibrium prices, shares, ΔCS by location / canton / income type, Δprofits | `scripts/15_simulation.py` | damped fixed point on banner FOCs; ΔCS = Δlogsum / α | [calibrated] | `assets/p1/m6/1_6_*` |
 | D14 | Scenario grid: 5 efficiency levels × 3 λμ cases (15 equilibria) | `scripts/16_scenarios.py` | same solver as D13 | [calibrated] | `assets/p1/m7/1_7_*` |
+| D15 | Outcome table (rows A–D, G), remedy curve, divestiture list | `scripts/17_outcomes.py` | remedy = change of owner (+ new banner) then full equilibrium | [calibrated] | `assets/p1/m8/1_8_*` |
 
 ## Key numbers from Phase 1 (for the appendix)
 - **Population:** 9,123,704 in 347,736 populated hectares → 32,388 shopper locations.
@@ -70,4 +71,5 @@ Last updated: 14 Nov 2026.
 | A10 Banners within a player share one δ | Migros = Migros + Partner + Migrolino; Coop = Coop + Pronto; Others = Volg + Landi + Spar + Manor | split within a player comes from price and geography; test format offsets later |
 | A11 Price-cost margin from accounts | (sales − goods − 0.5 × staff) / sales: Migros 24.9%, Coop 23.6% | staff share variable 0–1 → margins 16–34% → λμ 0.05–0.59 |
 | A12 Conduct | one λμ for both cooperatives (fitted to Migros); rivals incl. fenaco λμ = 0; uniform national banner prices | firm-specific λμ (Coop alone 0.310) |
+| A13 Divestiture buyer | divested Coop supermarkets: new owner, brand δ_Coop − 0.2 (≈ CHF 7/basket weaker); Denner sold whole with its brand; buyer λμ = 0 or 0.357 | brand loss 0–0.4; buyer cost = seller cost |
 | A8 Income types | ESTV taxpayer classes merged into 7; representative incomes 20k, 35k, 45k, 62.5k, 87.5k, 150k, 300k | top-class value 200k–500k |

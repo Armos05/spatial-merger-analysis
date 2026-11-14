@@ -1,0 +1,10 @@
+coop_share_sold,buyer,stores_sold,dcs_chf_hh_year,dp_Migros_pct,dp_Coop_pct,retained_flagged
+0.0,profit-max,0,-531.909,15.755,18.428,3151
+0.1,profit-max,101,-476.596,13.155,17.382,2873
+0.1,cooperative,101,-457.184,12.863,17.242,2873
+0.25,profit-max,252,-404.496,10.29,15.585,2549
+0.25,cooperative,252,-355.069,9.441,15.094,2549
+0.5,profit-max,504,-311.089,6.329,12.961,1881
+0.5,cooperative,504,-220.125,4.812,11.926,1881
+0.75,profit-max,756,-254.601,3.572,10.446,994
+0.75,cooperative,756,-132.284,1.657,9.286,994

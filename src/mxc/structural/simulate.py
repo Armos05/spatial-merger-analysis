@@ -28,10 +28,15 @@ from . import supply as su
 WEEKS = 52
 
 
-def make_banner_demand(a: dict):
-    """Returns a jitted f(theta) → (Q (B,), A (B,B), logsum (L,R), S (L,R,B), s0 (L,R))."""
-    B, G = len(dm.BANNERS), len(dm.NESTS)
-    nest_of_b = jnp.array([dm.NESTS.index(dm.BANNER_NEST[b]) for b in dm.BANNERS])
+def make_banner_demand(a: dict, banners=None, banner_nest=None):
+    """Returns a jitted f(theta) → (Q (B,), A (B,B), logsum (L,R), S (L,R,B), s0 (L,R)).
+
+    banners / banner_nest allow extra banners (e.g. divested stores under a new owner); default = dm.BANNERS.
+    """
+    banners = banners or dm.BANNERS
+    banner_nest = banner_nest or dm.BANNER_NEST
+    B, G = len(banners), len(dm.NESTS)
+    nest_of_b = jnp.array([dm.NESTS.index(banner_nest[b]) for b in banners])
     same_nest = (nest_of_b[:, None] == nest_of_b[None, :]).astype(float)
     L = a["hh"].shape[0]
     key = a["pair_loc"] * B + a["store_banner"][a["pair_store"]]
@@ -56,16 +61,17 @@ def make_banner_demand(a: dict):
     return lambda theta: f(theta, a)
 
 
-def solve_equilibrium(theta, banner_demand, cost, lm, owner, p_start=None, damp=0.5, tol=1e-9, max_iter=500):
+def solve_equilibrium(theta, banner_demand, cost, lm, owner, p_start=None, damp=0.5, tol=1e-9, max_iter=500,
+                      banners=None):
     """Damped fixed point p ← (1−d) p + d (c + m(p)). Returns prices and an iteration history."""
     p = np.asarray(theta.p if p_start is None else p_start, dtype=float)
     hist = []
     for it in range(max_iter):
         Q, A, *_ = banner_demand(theta._replace(p=jnp.asarray(p)))
-        m = su.markups(np.asarray(A), np.asarray(Q), owner, lm)
+        m = su.markups(np.asarray(A), np.asarray(Q), owner, lm, banners)
         target = cost + m
         step = np.abs(target - p).max()
-        hist.append({"iter": it, "max_abs_price_gap": step, **dict(zip(dm.BANNERS, p))})
+        hist.append({"iter": it, "max_abs_price_gap": step, **dict(zip(banners or dm.BANNERS, p))})
         if step < tol:
             break
         p = (1 - damp) * p + damp * target

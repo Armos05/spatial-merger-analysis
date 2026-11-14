@@ -30,14 +30,14 @@ OWNER_PRE = {
 OWNER_POST = {b: ("Migros-Coop" if o in ("Migros group", "Coop group") else o) for b, o in OWNER_PRE.items()}
 
 
-def omega(owner: dict) -> np.ndarray:
-    o = np.array([owner[b] for b in dm.BANNERS])
+def omega(owner: dict, banners=None) -> np.ndarray:
+    o = np.array([owner[b] for b in (banners or dm.BANNERS)])
     return (o[:, None] == o[None, :]).astype(float)
 
 
-def markups(A: np.ndarray, Q: np.ndarray, owner: dict, lm: np.ndarray) -> np.ndarray:
+def markups(A: np.ndarray, Q: np.ndarray, owner: dict, lm: np.ndarray, banners=None) -> np.ndarray:
     """(B,) CHF markups that satisfy the FOCs: m = −(Omega ∘ A)^(−1) (1 − λμ) Q."""
-    return np.linalg.solve(omega(owner) * A, -(1 - lm) * Q)
+    return np.linalg.solve(omega(owner, banners) * A, -(1 - lm) * Q)
 
 
 def foc_residual(A, Q, owner, lm, m) -> np.ndarray:

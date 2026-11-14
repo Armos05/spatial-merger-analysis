@@ -13,6 +13,7 @@ STEPS = [
     "14_screening.py",     # Pillar 1 step 5: national + store GUPPI/CMCR, Koh no-price check
     "15_simulation.py",    # Pillar 1 step 6: post-merger equilibrium, ΔCS by location / canton / income
     "16_scenarios.py",     # Pillar 1 step 7: efficiencies 0-10% × λμ survives / dilutes / disappears
+    "17_outcomes.py",      # Pillar 1 step 8: outcome table A-D, G + divestiture remedy curve
     # later steps append here: 20_screening.py, 30_simulation.py, ...
 ]
 

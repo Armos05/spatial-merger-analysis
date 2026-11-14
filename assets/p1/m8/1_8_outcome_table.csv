@@ -1,0 +1,13 @@
+row,scenario,iterations,dp_Migros_pct,dp_Coop_pct,dp_Aldi_pct,avg_price_paid_pct,dcs_chf_hh_year,dcs_near_border_lt15,dcs_far_from_border_gt30,dcs_chf_bn_year,dprofit_merged_chf_bn_year,dprofit_all_chf_bn_year,net_welfare_chf_bn_year,stores_divested,sales_divested_share,retained_stores_above_threshold,retained_stores,median_retained_guppi
+A,Status quo,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+B,"Merger, no remedy",38.0,18.0274,20.9084,0.9562,13.9581,-606.6977,-586.0612,-620.5217,-2.5898,1.4889,2.1973,-0.3925,0.0,0.0,3151.0,3158.0,0.0799
+C,B + 5% cost saving,38.0,15.7546,18.4285,0.7468,12.0727,-531.9094,-514.372,-544.0399,-2.2706,1.8572,2.4608,0.1903,0.0,0.0,3151.0,3158.0,0.0799
+D1,C + sell Denner (profit-max buyer),37.0,10.8304,13.5165,0.3066,8.2431,-370.4228,-358.7142,-378.8092,-1.5812,0.8453,1.8597,0.2784,807.0,0.1193,2336.0,2351.0,0.0825
+D2,C + sell top 25% Coop supermarkets by GUPPI (profit-max buyer),37.0,10.2899,15.5848,0.4981,8.5294,-404.4963,-390.2428,-414.1738,-1.7267,1.1498,1.9322,0.2055,252.0,0.0922,2549.0,2906.0,0.0669
+D3,C + sell top 25% Coop supermarkets (cooperative buyer),38.0,9.4411,15.094,0.4551,7.4722,-355.0686,-338.9406,-364.3146,-1.5157,1.006,1.7007,0.185,252.0,0.0922,2549.0,2906.0,0.0669
+D4,C + sell top 50% Coop supermarkets (profit-max buyer),37.0,6.3292,12.9607,0.3491,5.9099,-311.0886,-299.2141,-319.1389,-1.3279,0.5427,1.5055,0.1776,504.0,0.1861,1881.0,2654.0,0.0509
+D5,C + sell top 50% Coop supermarkets + Denner (profit-max buyers),37.0,2.9464,9.2362,0.2294,3.8874,-218.7662,-218.7906,-222.8102,-0.9338,-0.263,1.1177,0.1839,1311.0,0.3054,1433.0,1847.0,0.0642
+D6,C + sell top 50% Coop supermarkets + Denner (cooperative buyers),38.0,1.2918,7.8872,-0.1047,0.9095,-76.7243,-57.7439,-83.7488,-0.3275,-0.579,0.4646,0.1371,1311.0,0.3054,1433.0,1847.0,0.0642
+E,"C + data ring-fence (Pillar 3, pending)",,,,,,,,,,,,,,,,,
+F,"D + E (Pillar 3, pending)",,,,,,,,,,,,,,,,,
+G,Prohibit,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
