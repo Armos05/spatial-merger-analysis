@@ -11,6 +11,7 @@ STEPS = [
     "12_diversion.py",     # Pillar 1 step 3: store Jacobian, diversion (store, player, canton), elasticities
     "13_supply.py",        # Pillar 1 step 4: cooperative conduct λμ and marginal costs from 2024 accounts
     "14_screening.py",     # Pillar 1 step 5: national + store GUPPI/CMCR, Koh no-price check
+    "15_simulation.py",    # Pillar 1 step 6: post-merger equilibrium, ΔCS by location / canton / income
     # later steps append here: 20_screening.py, 30_simulation.py, ...
 ]
 
