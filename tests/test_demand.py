@@ -123,3 +123,32 @@ def test_gradient_matches_finite_difference(random_market):
     for k in [IDX["Migros"], IDX["Coop"], IDX["Aldi"]]:
         fd = (f(theta.delta.at[k].add(e)) - f(theta.delta.at[k].add(-e))) / (2 * e)
         assert float(g[k]) == pytest.approx(float(fd), rel=1e-5, abs=1e-9)
+
+
+def test_every_banner_belongs_to_one_player():
+    from mxc.structural import calibrate as cb
+    flat = [b for bs in cb.PLAYERS.values() for b in bs]
+    assert sorted(flat) == sorted(dm.BANNERS)
+
+
+def test_calibration_hits_targets(random_market):
+    from mxc.structural import calibrate as cb
+    theta, a, *_ = random_market
+    theta = theta._replace(delta=jnp.zeros(B))
+    # every player needs a store: add the missing banners as extra stores reachable from location 0
+    banners = [dm.BANNERS[int(i)] for i in np.asarray(a["store_banner"])]
+    extra = [b for b in dm.BANNERS if b not in banners]
+    J0 = len(banners)
+    nest = np.array([dm.NESTS.index(dm.BANNER_NEST[b]) for b in banners + extra])
+    a = dict(a)
+    a["store_banner"] = jnp.array([IDX[b] for b in banners + extra])
+    new_s = np.arange(J0, J0 + len(extra))
+    a["pair_loc"] = jnp.concatenate([a["pair_loc"], jnp.zeros(len(extra), int)])
+    a["pair_store"] = jnp.concatenate([a["pair_store"], jnp.array(new_s)])
+    a["pair_time"] = jnp.concatenate([a["pair_time"], jnp.full(len(extra), 5.0)])
+    a["pair_seg"] = a["pair_loc"] * len(dm.NESTS) + jnp.array(nest)[a["pair_store"]]
+    tgt = cb.targets(0.05)
+    theta_c, hist = cb.calibrate(theta, a, tgt, tol=1e-11)
+    model = np.asarray(cb.model_revenue_shares(theta_c, a, cb.player_index()))
+    np.testing.assert_allclose(model, tgt.to_numpy(), atol=1e-9)
+    assert hist.max_abs_log_gap.iloc[-1] < 1e-11

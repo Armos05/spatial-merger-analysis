@@ -7,7 +7,8 @@ STEPS = [
     "01_osm_extract.py",   # stores, boundaries, store counts by canton
     "02_geography.py",     # shopper locations, income, drive times, border times, detour check
     "10_demand.py",        # Pillar 1 step 1: choice sets, income types, demand at priors
-    # later steps append here: 11_calibrate.py, 20_screening.py, 30_simulation.py, ...
+    "11_calibrate.py",     # Pillar 1 step 2: delta fitted to 2025 sales shares + card-data abroad share
+    # later steps append here: 20_screening.py, 30_simulation.py, ...
 ]
 
 here = Path(__file__).parent

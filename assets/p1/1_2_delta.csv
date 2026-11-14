@@ -1,0 +1,13 @@
+,player,nest,price_index,delta,delta_vs_migros_chf,share_within_player,stores
+Migros,Migros,full-service,100.0,-0.05,0.0,0.6758,717
+Migros Partner,Migros,full-service,103.0,-0.05,0.0,0.0802,97
+Coop,Coop,full-service,102.0,-0.0991,-1.638,0.7937,1008
+Denner,Denner,discount,88.0,-1.2662,-40.5409,1.0,807
+Aldi,Aldi,discount,85.0,-0.6172,-18.9079,1.0,239
+Lidl,Lidl,discount,85.0,-0.3433,-9.7767,1.0,190
+Migrolino,Migros,convenience,115.0,-0.05,0.0,0.244,280
+Coop Pronto,Coop,convenience,115.0,-0.0991,-1.638,0.2063,249
+Volg,Others,other,108.0,-1.1157,-35.5236,0.4898,580
+Landi,Others,other,100.0,-1.1157,-35.5236,0.174,127
+Spar,Others,other,108.0,-1.1157,-35.5236,0.2517,214
+Manor,Others,other,110.0,-1.1157,-35.5236,0.0846,57
