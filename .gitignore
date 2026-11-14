@@ -16,3 +16,6 @@ LEARNING_MODULES.md
 EGK_SELF_TEST.md
 DESIGN_v0.1_archive.md
 toys/
+
+# Personal reference notes inside assets (kept local)
+assets/**/*.md

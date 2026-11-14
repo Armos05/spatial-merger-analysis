@@ -21,7 +21,8 @@ report/              engagement brief and memo
 src/mxc/             package: data, structural, twin, causal, datamerger, extensions
 scripts/             numbered pipeline steps; run_all.py rebuilds everything
 tests/               unit tests
-outputs/tables/      small result tables
+assets/p1, p2, p3    figures and tables per pillar, named <pillar>_<step>_<name> (e.g. 1_1_reach.png)
+outputs/tables/      Phase 1 data tables
 ```
 
 ## Reproduce
