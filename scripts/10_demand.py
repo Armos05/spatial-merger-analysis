@@ -13,6 +13,7 @@ Outputs:
   assets/p1/1_1_store_map.png          where each group's stores are
   assets/p1/1_1_overlap_map.png        where only the merging groups are in reach
   assets/p1/1_1_reach.png              households within x minutes of each group
+  assets/p1/1_1_income_map.png         median taxable-unit net income by municipality (drives alpha)
 """
 import sys
 import time
@@ -26,6 +27,7 @@ import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
 
 import geopandas as gpd  # noqa: E402
+import matplotlib  # noqa: E402
 import pyproj  # noqa: E402
 
 from mxc import viz  # noqa: E402
@@ -167,6 +169,36 @@ def figures(mkt, only_10):
     ax.legend(loc="lower right")
     viz.source(ax, "Free-flow drive times. " + SRC)
     viz.save(fig, 1, "1_1", "reach")
+
+    # 4. income: median net income per taxpayer by municipality (ESTV 2023) -> price sensitivity alpha
+    from matplotlib.colors import BoundaryNorm, ListedColormap
+    muni = pd.read_parquet(PROCESSED / "municipalities.parquet")
+    mun = adm[adm.admin_level.astype(str) == "8"].copy()
+    mun["bfs"] = pd.to_numeric(mun.bfs, errors="coerce")
+    mun = mun.to_crs(2056).merge(muni[["median_net_income"]], left_on="bfs", right_index=True, how="left")
+    bins = [0, 45_000, 50_000, 55_000, 60_000, 65_000, 70_000, 80_000, 1e9]
+    ramp = ["#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#2a78d6", "#256abf", "#184f95", "#0d366b"]
+    cmap, norm = ListedColormap(ramp), BoundaryNorm(bins, len(ramp))
+    fig, ax = plt_subplots(1, 1, (8.5, 5.8))
+    viz.map_axes(ax, cantons)
+    mun[mun.median_net_income.isna()].plot(ax=ax, color=viz.GRID, linewidth=0, zorder=1)
+    mun.dropna(subset=["median_net_income"]).plot(ax=ax, column="median_net_income", cmap=cmap, norm=norm,
+                                                  linewidth=0.1, edgecolor=viz.SURFACE, zorder=2)
+    cantons.boundary.plot(ax=ax, color=viz.SURFACE, linewidth=0.8, zorder=3)
+    nat = float(np.average(muni.median_net_income.dropna(), weights=muni.loc[muni.median_net_income.notna(), "taxpayers"]))
+    lo = mun.dropna(subset=["median_net_income"]).nsmallest(1, "median_net_income").iloc[0]
+    hi = mun.dropna(subset=["median_net_income"]).nlargest(1, "median_net_income").iloc[0]
+    ax.set_title("Incomes are highest around Zurich, Zug and Lake Geneva's north shore")
+    sm = matplotlib.cm.ScalarMappable(cmap=cmap, norm=norm)
+    cb = fig.colorbar(sm, ax=ax, orientation="horizontal", fraction=0.04, pad=0.02, aspect=40,
+                      ticks=bins[1:-1], spacing="uniform")
+    cb.ax.set_xticklabels([f"{b // 1000:.0f}k" for b in bins[1:-1]], fontsize=8)
+    cb.set_label("median net income per taxpayer, CHF / year (municipality)", fontsize=8.5, color=viz.INK_2)
+    cb.outline.set_visible(False)
+    viz.source(ax, f"Taxpayer-weighted average of municipal medians: CHF {nat:,.0f}. Range: {lo['name']} "
+                   f"CHF {lo.median_net_income:,.0f} to {hi['name']} CHF {hi.median_net_income:,.0f}. "
+                   "Grey = no ESTV row (recent mergers). Source: ESTV direct federal tax 2023; OSM boundaries.")
+    viz.save(fig, 1, "1_1", "income_map")
 
 
 def plt_subplots(r, c, size):

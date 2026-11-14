@@ -44,7 +44,8 @@ Extensions (appendix only): supplier bargaining (Nash-in-Nash), entry thresholds
 
 | Fact | Value | Source | Status |
 |---|---|---|---|
-| Coop share, food & near-food | 43% | Blick (citing market data; year not stated) | [verify] year & definition; Coop gained share in 2025 (Lebensmittel Zeitung) |
+| Coop share, food & near-food | 43% | NielsenIQ Retail Monitor via SonntagsZeitung (Nov 2025) | base = the major retailers only, year unstated → **not used** for calibration |
+| **Calibration targets (2025, domestic food-retail sales)** | Coop 33.7%, Migros 33.5%, Denner ≈ 9.1% (Migros group 42.6%), Lidl 8.4%, Aldi 7.3%, others ≈ 8% | watson.ch (29 Oct 2026; source unnamed) | **cross-checked** with annual-report sales: among the five, Migros 37% vs 36% implied ✓, Denner 11% vs 10% |
 | Migros share, food & near-food | 37.4% | same | [verify] year |
 | Combined share | ~70–80% depending on definition; **69% of tracked grocery outlets** in our OSM count (3,158 / 4,565) | Greenpeace 2026 (~80%); own count | partly verified (outlets ≠ sales) |
 | Denner owned by Migros | WEKO cleared with conditions, 3 Sep 2007: Denner kept as separate brand, **excluded from Cumulus**, supplier protection, measures easing Aldi/Lidl entry; for 7 years or until Aldi + Lidl reach 250 sites | admin.ch press release; Tages-Anzeiger | **verified**; conditions have lapsed (Aldi + Lidl now ~430 stores) [verify exact end date] |
