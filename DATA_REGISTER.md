@@ -42,6 +42,7 @@ Last updated: 14 Nov 2026.
 | D16 | Digital twin panels (store-week, store × category × week) + answer key (true elasticity, diversion per store) | `scripts/20_twin.py` | Pillar 1 demand at simulated store prices and shocks | [sim] | `data/processed/twin/`, `assets/p2/m1/2_1_*` |
 | D17 | Events twin, counterfactual twin, entry/closure answer key, loyalty panel (households, trips, Cumulus view, Supercard view) | `scripts/21_events_loyalty.py` | same shocks as 2.1; entry truth = model with vs without each entrant | [sim] | `data/processed/twin/events/`, `assets/p2/m2/2_2_*` |
 | D18 | T1 entry estimates (TWFE, stacked event study, pooled exposure) on observed and noise-free twin data, scorecard, diversion to entrant | `scripts/22_t1_entry.py` | scored against the 2.2 answer key | [sim] | `assets/p2/m3/2_3_*` |
+| D19 | T2 elasticity estimates (OLS-FE, IV-FE, DML-PLR, DML-PLIV) national / banner / canton, scorecard, nuisance R² | `scripts/23_t2_elasticity.py` | LightGBM nuisances, 5-fold cross-fitting by store; scored against 2.1 answer key | [sim] | `assets/p2/m4/2_4_*` |
 
 ## Key numbers from Phase 1 (for the appendix)
 - **Population:** 9,123,704 in 347,736 populated hectares → 32,388 shopper locations.

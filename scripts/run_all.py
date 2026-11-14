@@ -17,6 +17,7 @@ STEPS = [
     "20_twin.py",          # Pillar 2 step 1: digital twin (store-week + store-category-week panels) + answer key [sim]
     "21_events_loyalty.py",  # Pillar 2 step 2: Aldi/Lidl openings, Spar closures, loyalty-card panel [sim]
     "22_t1_entry.py",       # Pillar 2 step 3: T1 entry analysis — TWFE vs stacked event study vs pooled exposure [sim]
+    "23_t2_elasticity.py",  # Pillar 2 step 4: T2 elasticities — OLS vs IV vs DML-PLR vs DML-PLIV [sim]
     # later steps append here: 20_screening.py, 30_simulation.py, ...
 ]
 

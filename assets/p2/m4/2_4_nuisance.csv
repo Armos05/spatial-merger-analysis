@@ -1,0 +1,6 @@
+target,out_of_fold_r2
+y_dm,0.5976070416540782
+d_dm,0.5467101159004357
+z_dm,0.6569142830289391
+"first-stage corr(z̃, d̃), FE only",0.5571361118632895
+"first-stage corr(z̃, d̃), DML",0.45166651267691105

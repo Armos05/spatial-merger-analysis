@@ -1,0 +1,13 @@
+level,method,cells,bias,rmse,rel_bias_pct,coverage_95,mean_se
+banner,DML-PLIV (ML + cost),12.0,0.0673,0.0748,1.517,0.4167,0.033
+banner,DML-PLR (ML controls),12.0,2.0156,2.0157,45.9577,0.0,0.0127
+banner,IV-FE (cost),12.0,0.1794,0.1931,4.0748,0.0833,0.0399
+banner,OLS-FE,12.0,1.8455,1.8457,42.0831,0.0,0.0154
+canton,DML-PLIV (ML + cost),26.0,0.0737,0.0988,1.6992,0.6923,0.0629
+canton,DML-PLR (ML controls),26.0,1.9914,1.9926,45.7187,0.0,0.032
+canton,IV-FE (cost),26.0,0.1763,0.2306,4.0244,0.3846,0.0798
+canton,OLS-FE,26.0,1.8298,1.8307,42.0099,0.0,0.0363
+national,DML-PLIV (ML + cost),1.0,0.0771,0.0771,1.7626,0.0,0.0083
+national,DML-PLR (ML controls),1.0,2.0281,2.0281,46.3806,0.0,0.0045
+national,IV-FE (cost),1.0,0.2196,0.2196,5.022,0.0,0.0096
+national,OLS-FE,1.0,1.858,1.858,42.4895,0.0,0.005
