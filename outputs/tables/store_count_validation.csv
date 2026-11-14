@@ -1,0 +1,6 @@
+banner,osm_count,published_count,published_basis,source,gap_pct,status
+Migros,717,672,"Migros stores (date not stated; Statista)",https://de.statista.com/themen/2023/migros,+6.7,[verify vs Migros Geschaeftsbericht 2025]
+Coop,1008,1000,"Coop supermarkets, end 2025",https://www.cash.ch/news/kampf-um-ladenlokale-coop-eroffnet-1000-supermarkt-973152,+0.8,ok
+Denner,807,860,"~600 own + ~260 partner stores, 2025",https://www.blick.ch/wirtschaft/umsatz-stagniert-erneut-bei-3-9-milliarden-franken-denner-chef-will-filialnetz-auf-1000-standorte-ausbauen-id21611850.html,-6.2,ok (OSM under-maps some partners)
+Aldi,239,244,"stores, Feb 2026",https://www.blick.ch/wirtschaft/was-ist-bloss-bei-aldi-los-discounter-schliesst-zweistoeckige-vorzeige-filiale-in-zuerich-und-drosselt-expansion-id21644578.html,-2.0,ok
+Lidl,190,190,"stores (baseline of 2035 growth plan; date not stated)",https://www.bluewin.ch/de/news/wirtschaft/lidl-schweiz-plant-ueber-100-neue-filialen-bis-spaetestens-2035-li.2942031,0.0,ok
