@@ -1,0 +1,17 @@
+method,group,share,lo95,hi95
+TWFE (store-month),Aldi / Lidl,0.3582,0.2603,0.455
+TWFE (store-month),Coop group,0.179,0.0489,0.3084
+TWFE (store-month),Migros group,0.7377,0.5856,0.8889
+TWFE (store-month),Others,0.0111,-0.0089,0.0309
+pooled exposure,Aldi / Lidl,0.0804,0.0177,0.1426
+pooled exposure,Coop group,0.0138,-0.0594,0.0867
+pooled exposure,Migros group,0.1502,0.0629,0.2372
+pooled exposure,Others,0.007,-0.0085,0.0224
+stacked event study,Aldi / Lidl,0.2357,0.0328,0.4329
+stacked event study,Coop group,0.2811,-0.105,0.6596
+stacked event study,Migros group,0.743,0.3609,1.1196
+stacked event study,Others,0.0108,-0.0474,0.0677
+truth,Aldi / Lidl,0.107,,
+truth,Coop group,0.1115,,
+truth,Migros group,0.2103,,
+truth,Others,0.0189,,

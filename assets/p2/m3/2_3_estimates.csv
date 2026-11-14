@@ -1,0 +1,145 @@
+band,group,beta,se,n_stores,loss_pct,lo95,hi95,method,data,truth_loss_pct
+0-1 km,Aldi / Lidl,-0.0458,0.0069,51.0,4.4721,3.1718,5.755,TWFE (store-month),observed,2.1086
+0-1 km,Migros group,-0.0308,0.0033,311.0,3.0289,2.3943,3.6593,TWFE (store-month),observed,1.8449
+0-1 km,Coop group,-0.0133,0.0035,194.0,1.3259,0.6537,1.9935,TWFE (store-month),observed,1.2484
+0-1 km,Others,-0.0152,0.0069,41.0,1.5069,0.1695,2.8265,TWFE (store-month),observed,1.142
+1-2 km,Aldi / Lidl,-0.0539,0.0073,38.0,5.2438,3.8702,6.5977,TWFE (store-month),observed,2.0825
+1-2 km,Migros group,-0.0304,0.0028,315.0,2.9961,2.46,3.5291,TWFE (store-month),observed,1.4148
+1-2 km,Coop group,-0.0086,0.0031,184.0,0.8543,0.2498,1.4552,TWFE (store-month),observed,0.8487
+1-2 km,Others,-0.0131,0.0059,58.0,1.303,0.1645,2.4286,TWFE (store-month),observed,0.9937
+2-3 km,Aldi / Lidl,-0.0611,0.0065,46.0,5.9241,4.7114,7.1214,TWFE (store-month),observed,1.8021
+2-3 km,Migros group,-0.0229,0.0031,268.0,2.2618,1.6611,2.8587,TWFE (store-month),observed,1.1695
+2-3 km,Coop group,-0.0041,0.0034,185.0,0.4091,-0.2599,1.0737,TWFE (store-month),observed,0.7643
+2-3 km,Others,-0.0085,0.0057,64.0,0.8469,-0.2661,1.9475,TWFE (store-month),observed,0.9776
+3-5 km,Aldi / Lidl,-0.0338,0.0065,48.0,3.3246,2.0792,4.5541,TWFE (store-month),observed,1.3043
+3-5 km,Migros group,-0.0275,0.0029,298.0,2.7116,2.1646,3.2556,TWFE (store-month),observed,0.9166
+3-5 km,Coop group,-0.0051,0.0034,193.0,0.5077,-0.1534,1.1645,TWFE (store-month),observed,0.5599
+3-5 km,Others,-0.0019,0.0034,177.0,0.1851,-0.4793,0.8451,TWFE (store-month),observed,0.7209
+5-10 km,Aldi / Lidl,-0.0433,0.0058,59.0,4.2336,3.1414,5.3136,TWFE (store-month),observed,1.1085
+5-10 km,Migros group,-0.0256,0.0027,348.0,2.5299,2.0162,3.041,TWFE (store-month),observed,0.7788
+5-10 km,Coop group,-0.0099,0.0029,236.0,0.9859,0.4229,1.5458,TWFE (store-month),observed,0.4724
+5-10 km,Others,-0.0022,0.0025,297.0,0.2222,-0.271,0.713,TWFE (store-month),observed,0.5697
+0-1 km,Aldi / Lidl,-0.0232,0.0191,15.0,2.2935,-1.4358,5.8857,stacked event study,observed,2.1086
+0-1 km,Migros group,-0.039,0.0103,99.0,3.8289,1.8689,5.7497,stacked event study,observed,1.8449
+0-1 km,Coop group,-0.0186,0.012,55.0,1.8386,-0.5071,4.1296,stacked event study,observed,1.2484
+0-1 km,Others,-0.0611,0.0265,12.0,5.9272,0.9146,10.6861,stacked event study,observed,1.142
+1-2 km,Aldi / Lidl,-0.0675,0.0156,8.0,6.5283,3.6267,9.3425,stacked event study,observed,2.0825
+1-2 km,Migros group,-0.0505,0.0103,69.0,4.9233,2.9896,6.8186,stacked event study,observed,1.4148
+1-2 km,Coop group,-0.0204,0.0149,45.0,2.0148,-0.8981,4.8436,stacked event study,observed,0.8487
+1-2 km,Others,0.0053,0.0176,20.0,-0.5268,-4.0514,2.8783,stacked event study,observed,0.9937
+2-3 km,Aldi / Lidl,-0.034,0.0192,16.0,3.3427,-0.3676,6.9158,stacked event study,observed,1.8021
+2-3 km,Migros group,-0.0348,0.0097,84.0,3.4168,1.5627,5.236,stacked event study,observed,1.1695
+2-3 km,Coop group,0.0107,0.0131,59.0,-1.0707,-3.6901,1.4826,stacked event study,observed,0.7643
+2-3 km,Others,-0.012,0.0137,32.0,1.197,-1.4921,3.8147,stacked event study,observed,0.9776
+3-5 km,Aldi / Lidl,-0.0272,0.0178,26.0,2.6805,-0.77,6.0129,stacked event study,observed,1.3043
+3-5 km,Migros group,-0.029,0.0075,178.0,2.855,1.4239,4.2654,stacked event study,observed,0.9166
+3-5 km,Coop group,-0.0037,0.0111,118.0,0.3678,-1.827,2.5152,stacked event study,observed,0.5599
+3-5 km,Others,-0.0005,0.0111,81.0,0.0471,-2.1519,2.1989,stacked event study,observed,0.7209
+5-10 km,Aldi / Lidl,-0.0248,0.0082,80.0,2.4454,0.8744,3.9916,stacked event study,observed,1.1085
+5-10 km,Migros group,-0.0196,0.0056,529.0,1.9397,0.8556,3.0119,stacked event study,observed,0.7788
+5-10 km,Coop group,-0.0197,0.0067,316.0,1.9528,0.6613,3.2275,stacked event study,observed,0.4724
+5-10 km,Others,-0.0015,0.0068,316.0,0.1487,-1.1857,1.4656,stacked event study,observed,0.5697
+0-1 km,Aldi / Lidl,-0.0207,0.0091,,2.049,0.2945,3.7725,pooled exposure,observed,2.1086
+0-1 km,Migros group,-0.0189,0.0044,,1.8688,1.0218,2.7086,pooled exposure,observed,1.8449
+0-1 km,Coop group,-0.0093,0.0045,,0.9236,0.0374,1.802,pooled exposure,observed,1.2484
+0-1 km,Others,-0.0183,0.0076,,1.818,0.3455,3.2687,pooled exposure,observed,1.142
+1-2 km,Aldi / Lidl,-0.0279,0.0085,,2.7544,1.1155,4.3661,pooled exposure,observed,2.0825
+1-2 km,Migros group,-0.0151,0.0029,,1.4941,0.9295,2.0555,pooled exposure,observed,1.4148
+1-2 km,Coop group,-0.0046,0.0033,,0.4598,-0.1906,1.106,pooled exposure,observed,0.8487
+1-2 km,Others,-0.0102,0.0062,,1.0109,-0.2087,2.2157,pooled exposure,observed,0.9937
+2-3 km,Aldi / Lidl,-0.0307,0.0056,,3.0204,1.9571,4.0723,pooled exposure,observed,1.8021
+2-3 km,Migros group,-0.0068,0.0028,,0.6796,0.1316,1.2245,pooled exposure,observed,1.1695
+2-3 km,Coop group,-0.0038,0.0031,,0.3786,-0.2292,0.9826,pooled exposure,observed,0.7643
+2-3 km,Others,-0.0154,0.0066,,1.5241,0.2498,2.7822,pooled exposure,observed,0.9776
+3-5 km,Aldi / Lidl,-0.0047,0.0047,,0.4664,-0.4614,1.3856,pooled exposure,observed,1.3043
+3-5 km,Migros group,-0.0026,0.0017,,0.2615,-0.0633,0.5853,pooled exposure,observed,0.9166
+3-5 km,Coop group,0.0038,0.0019,,-0.3824,-0.7654,-0.0008,pooled exposure,observed,0.5599
+3-5 km,Others,0.0034,0.0032,,-0.3379,-0.9746,0.2949,pooled exposure,observed,0.7209
+5-10 km,Aldi / Lidl,-0.0048,0.0021,,0.481,0.0664,0.894,pooled exposure,observed,1.1085
+5-10 km,Migros group,-0.0034,0.0009,,0.3396,0.1716,0.5074,pooled exposure,observed,0.7788
+5-10 km,Coop group,-0.0006,0.0009,,0.0631,-0.1218,0.2476,pooled exposure,observed,0.4724
+5-10 km,Others,-0.0014,0.0013,,0.1406,-0.1228,0.4033,pooled exposure,observed,0.5697
+10-15 km,Aldi / Lidl,-0.0006,0.0018,,0.058,-0.2995,0.4143,pooled exposure,observed,
+10-15 km,Migros group,-0.0002,0.0008,,0.0217,-0.1262,0.1694,pooled exposure,observed,
+10-15 km,Coop group,-0.0013,0.0009,,0.1339,-0.044,0.3115,pooled exposure,observed,
+10-15 km,Others,-0.0003,0.0011,,0.0301,-0.1772,0.2371,pooled exposure,observed,
+15-20 km,Aldi / Lidl,0.0002,0.0017,,-0.0223,-0.3638,0.318,pooled exposure,observed,
+15-20 km,Migros group,-0.001,0.0008,,0.0988,-0.0616,0.2589,pooled exposure,observed,
+15-20 km,Coop group,0.0005,0.001,,-0.0484,-0.2367,0.1395,pooled exposure,observed,
+15-20 km,Others,0.0006,0.0011,,-0.0574,-0.2649,0.1498,pooled exposure,observed,
+20-30 km,Aldi / Lidl,-0.002,0.0008,,0.1972,0.0332,0.361,pooled exposure,observed,
+20-30 km,Migros group,-0.0002,0.0004,,0.0242,-0.052,0.1003,pooled exposure,observed,
+20-30 km,Coop group,0.0,0.0005,,-0.0031,-0.0972,0.0908,pooled exposure,observed,
+20-30 km,Others,0.0005,0.0005,,-0.0537,-0.1455,0.038,pooled exposure,observed,
+0-1 km,Aldi / Lidl,-0.0454,0.0068,51.0,4.4378,3.1602,5.6986,TWFE (store-month),noise-free,2.1086
+0-1 km,Migros group,-0.0308,0.0033,311.0,3.0302,2.401,3.6553,TWFE (store-month),noise-free,1.8449
+0-1 km,Coop group,-0.0129,0.0034,194.0,1.2814,0.6227,1.9357,TWFE (store-month),noise-free,1.2484
+0-1 km,Others,-0.0152,0.0068,41.0,1.5124,0.1821,2.8249,TWFE (store-month),noise-free,1.142
+1-2 km,Aldi / Lidl,-0.0534,0.0072,38.0,5.2043,3.8486,6.5409,TWFE (store-month),noise-free,2.0825
+1-2 km,Migros group,-0.0304,0.0028,315.0,2.9965,2.4658,3.5242,TWFE (store-month),noise-free,1.4148
+1-2 km,Coop group,-0.0086,0.0031,184.0,0.8587,0.2574,1.4564,TWFE (store-month),noise-free,0.8487
+1-2 km,Others,-0.0126,0.0057,58.0,1.2503,0.1336,2.3545,TWFE (store-month),noise-free,0.9937
+2-3 km,Aldi / Lidl,-0.0617,0.0064,46.0,5.9801,4.7909,7.1543,TWFE (store-month),noise-free,1.8021
+2-3 km,Migros group,-0.0226,0.0031,268.0,2.2366,1.642,2.8277,TWFE (store-month),noise-free,1.1695
+2-3 km,Coop group,-0.0044,0.0033,185.0,0.442,-0.2066,1.0865,TWFE (store-month),noise-free,0.7643
+2-3 km,Others,-0.0097,0.0056,64.0,0.9624,-0.1362,2.0489,TWFE (store-month),noise-free,0.9776
+3-5 km,Aldi / Lidl,-0.0323,0.0064,48.0,3.1827,1.9664,4.3839,TWFE (store-month),noise-free,1.3043
+3-5 km,Migros group,-0.0273,0.0029,298.0,2.6901,2.1409,3.2362,TWFE (store-month),noise-free,0.9166
+3-5 km,Coop group,-0.0042,0.0033,193.0,0.4209,-0.2338,1.0714,TWFE (store-month),noise-free,0.5599
+3-5 km,Others,-0.002,0.0033,177.0,0.1959,-0.4593,0.8469,TWFE (store-month),noise-free,0.7209
+5-10 km,Aldi / Lidl,-0.0434,0.0058,59.0,4.2425,3.1442,5.3284,TWFE (store-month),noise-free,1.1085
+5-10 km,Migros group,-0.0256,0.0026,348.0,2.5283,2.0208,3.0331,TWFE (store-month),noise-free,0.7788
+5-10 km,Coop group,-0.0097,0.0029,236.0,0.9672,0.412,1.5192,TWFE (store-month),noise-free,0.4724
+5-10 km,Others,-0.0024,0.0025,297.0,0.2385,-0.2521,0.7268,TWFE (store-month),noise-free,0.5697
+0-1 km,Aldi / Lidl,-0.0236,0.0175,15.0,2.3352,-1.0792,5.6342,stacked event study,noise-free,2.1086
+0-1 km,Migros group,-0.0381,0.0104,99.0,3.7423,1.7585,5.6859,stacked event study,noise-free,1.8449
+0-1 km,Coop group,-0.0186,0.0117,55.0,1.844,-0.4276,4.0643,stacked event study,noise-free,1.2484
+0-1 km,Others,-0.0578,0.0274,12.0,5.6136,0.4139,10.5419,stacked event study,noise-free,1.142
+1-2 km,Aldi / Lidl,-0.0649,0.0149,8.0,6.287,3.5041,8.9896,stacked event study,noise-free,2.0825
+1-2 km,Migros group,-0.0508,0.01,69.0,4.9561,3.0723,6.8033,stacked event study,noise-free,1.4148
+1-2 km,Coop group,-0.021,0.0148,45.0,2.0764,-0.7961,4.867,stacked event study,noise-free,0.8487
+1-2 km,Others,0.0043,0.0177,20.0,-0.4283,-3.9653,2.9884,stacked event study,noise-free,0.9937
+2-3 km,Aldi / Lidl,-0.0321,0.0201,16.0,3.1627,-0.7199,6.8956,stacked event study,noise-free,1.8021
+2-3 km,Migros group,-0.0336,0.0098,84.0,3.3051,1.4273,5.1471,stacked event study,noise-free,1.1695
+2-3 km,Coop group,0.0106,0.0128,59.0,-1.0699,-3.6333,1.43,stacked event study,noise-free,0.7643
+2-3 km,Others,-0.0121,0.014,32.0,1.2005,-1.5462,3.873,stacked event study,noise-free,0.9776
+3-5 km,Aldi / Lidl,-0.0249,0.0176,26.0,2.4626,-0.9682,5.7768,stacked event study,noise-free,1.3043
+3-5 km,Migros group,-0.0293,0.0074,178.0,2.8899,1.4773,4.2823,stacked event study,noise-free,0.9166
+3-5 km,Coop group,-0.0048,0.0113,118.0,0.4801,-1.7508,2.662,stacked event study,noise-free,0.5599
+3-5 km,Others,-0.001,0.0114,81.0,0.0974,-2.1503,2.2956,stacked event study,noise-free,0.7209
+5-10 km,Aldi / Lidl,-0.025,0.0081,80.0,2.4722,0.9041,4.0155,stacked event study,noise-free,1.1085
+5-10 km,Migros group,-0.0201,0.0056,529.0,1.9924,0.9065,3.0664,stacked event study,noise-free,0.7788
+5-10 km,Coop group,-0.0202,0.0066,316.0,2.0025,0.7346,3.2542,stacked event study,noise-free,0.4724
+5-10 km,Others,-0.001,0.0068,316.0,0.0974,-1.2422,1.4194,stacked event study,noise-free,0.5697
+0-1 km,Aldi / Lidl,-0.0203,0.0089,,2.0087,0.2858,3.7019,pooled exposure,noise-free,2.1086
+0-1 km,Migros group,-0.0191,0.0044,,1.8897,1.047,2.7253,pooled exposure,noise-free,1.8449
+0-1 km,Coop group,-0.009,0.0045,,0.8913,0.0195,1.7555,pooled exposure,noise-free,1.2484
+0-1 km,Others,-0.0184,0.0077,,1.8236,0.3306,3.2942,pooled exposure,noise-free,1.142
+1-2 km,Aldi / Lidl,-0.0271,0.0084,,2.6718,1.0469,4.27,pooled exposure,noise-free,2.0825
+1-2 km,Migros group,-0.0152,0.0029,,1.5064,0.9442,2.0653,pooled exposure,noise-free,1.4148
+1-2 km,Coop group,-0.0046,0.0033,,0.4613,-0.1856,1.104,pooled exposure,noise-free,0.8487
+1-2 km,Others,-0.0094,0.0063,,0.9311,-0.2949,2.1421,pooled exposure,noise-free,0.9937
+2-3 km,Aldi / Lidl,-0.0312,0.0056,,3.072,2.008,4.1246,pooled exposure,noise-free,1.8021
+2-3 km,Migros group,-0.0068,0.0028,,0.6761,0.1297,1.2194,pooled exposure,noise-free,1.1695
+2-3 km,Coop group,-0.0037,0.003,,0.3697,-0.2247,0.9604,pooled exposure,noise-free,0.7643
+2-3 km,Others,-0.0164,0.0065,,1.6247,0.3583,2.8751,pooled exposure,noise-free,0.9776
+3-5 km,Aldi / Lidl,-0.0039,0.0047,,0.3854,-0.5375,1.2998,pooled exposure,noise-free,1.3043
+3-5 km,Migros group,-0.0027,0.0017,,0.272,-0.0521,0.5951,pooled exposure,noise-free,0.9166
+3-5 km,Coop group,0.0037,0.0019,,-0.3669,-0.7478,0.0126,pooled exposure,noise-free,0.5599
+3-5 km,Others,0.0032,0.0032,,-0.3218,-0.9525,0.305,pooled exposure,noise-free,0.7209
+5-10 km,Aldi / Lidl,-0.0046,0.0021,,0.4607,0.0523,0.8675,pooled exposure,noise-free,1.1085
+5-10 km,Migros group,-0.0034,0.0009,,0.3386,0.1706,0.5063,pooled exposure,noise-free,0.7788
+5-10 km,Coop group,-0.0006,0.0009,,0.0566,-0.1266,0.2394,pooled exposure,noise-free,0.4724
+5-10 km,Others,-0.0013,0.0013,,0.1276,-0.1347,0.3892,pooled exposure,noise-free,0.5697
+10-15 km,Aldi / Lidl,-0.0006,0.0018,,0.0557,-0.3039,0.414,pooled exposure,noise-free,
+10-15 km,Migros group,-0.0001,0.0008,,0.0092,-0.1391,0.1574,pooled exposure,noise-free,
+10-15 km,Coop group,-0.0014,0.0009,,0.1412,-0.0349,0.3171,pooled exposure,noise-free,
+10-15 km,Others,-0.0004,0.0011,,0.0376,-0.1695,0.2443,pooled exposure,noise-free,
+15-20 km,Aldi / Lidl,-0.0002,0.0017,,0.0202,-0.3216,0.3608,pooled exposure,noise-free,
+15-20 km,Migros group,-0.0009,0.0008,,0.0903,-0.0696,0.2501,pooled exposure,noise-free,
+15-20 km,Coop group,0.0004,0.001,,-0.0402,-0.2277,0.1469,pooled exposure,noise-free,
+15-20 km,Others,0.0006,0.0011,,-0.0577,-0.2663,0.1505,pooled exposure,noise-free,
+20-30 km,Aldi / Lidl,-0.0019,0.0008,,0.1944,0.0319,0.3565,pooled exposure,noise-free,
+20-30 km,Migros group,-0.0003,0.0004,,0.0286,-0.0474,0.1047,pooled exposure,noise-free,
+20-30 km,Coop group,0.0001,0.0005,,-0.0096,-0.1027,0.0834,pooled exposure,noise-free,
+20-30 km,Others,0.0005,0.0005,,-0.0493,-0.1426,0.0439,pooled exposure,noise-free,

@@ -1,0 +1,7 @@
+data,method,cells,bias_pp,rmse_pp,coverage_95,mean_ci_width_pp,rmse_within_3km_pp,bias_within_3km_pp
+noise-free,TWFE (store-month),20.0,1.0915,1.7057,0.5,1.6677,1.7791,1.1496
+noise-free,pooled exposure,20.0,-0.1975,0.6218,0.55,1.5658,0.5435,0.1274
+noise-free,stacked event study,20.0,1.1346,1.9888,0.7,4.8886,2.3731,1.3856
+observed,TWFE (store-month),20.0,1.1023,1.7155,0.5,1.6889,1.7806,1.148
+observed,pooled exposure,20.0,-0.1907,0.6093,0.6,1.5746,0.5282,0.132
+observed,stacked event study,20.0,1.1661,2.067,0.65,4.9036,2.48,1.443
