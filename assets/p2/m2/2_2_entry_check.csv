@@ -1,0 +1,7 @@
+,value
+entrants with stores within 3 km,120.0
+"answer key: loss of stores within 3 km, mean over entrants, %",1.835
+"twin: opening-week jump, mean over entrants, %",1.812
+correlation across entrants (jump vs answer key),0.971
+"twin: 26-week before/after window, mean over entrants, %",3.093
+correlation across entrants (window vs answer key),0.808

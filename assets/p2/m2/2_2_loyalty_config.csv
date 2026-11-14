@@ -1,0 +1,51 @@
+block,parameter,value
+panel,seed,2027
+panel,n_households,20000
+panel,alpha_sd,0.15
+panel,size_sd,0.3
+panel,spend_sd,0.35
+panel,dept_conc,30.0
+panel,p_cumulus,0.8
+panel,p_supercard,0.7
+panel,swipe_rate,0.9
+panel,border_near_min,20.0
+segment mainstream,weight,0.35
+segment mainstream,alpha,1.0
+segment mainstream,gamma,1.0
+segment mainstream,kappa,1.0
+segment mainstream,trips,1.0
+segment mainstream,size,1.0
+segment mainstream,taste,{}
+segment mainstream,dept,"(1.0, 1.0, 1.0, 1.0)"
+segment price_hunter,weight,0.2
+segment price_hunter,alpha,1.4
+segment price_hunter,gamma,0.9
+segment price_hunter,kappa,0.9
+segment price_hunter,trips,1.0
+segment price_hunter,size,1.1
+segment price_hunter,taste,{'discount': 0.5}
+segment price_hunter,dept,"(0.8, 1.4, 0.9, 1.1)"
+segment convenience,weight,0.15
+segment convenience,alpha,0.9
+segment convenience,gamma,1.6
+segment convenience,kappa,1.3
+segment convenience,trips,1.5
+segment convenience,size,0.6
+segment convenience,taste,{'convenience': 0.6}
+segment convenience,dept,"(0.8, 0.7, 1.6, 0.8)"
+segment quality,weight,0.2
+segment quality,alpha,0.7
+segment quality,gamma,1.0
+segment quality,kappa,1.2
+segment quality,trips,0.9
+segment quality,size,1.2
+segment quality,taste,"{'full-service': 0.3, 'discount': -0.4}"
+segment quality,dept,"(1.4, 0.8, 1.0, 0.7)"
+segment border_shopper,weight,0.1
+segment border_shopper,alpha,1.2
+segment border_shopper,gamma,1.0
+segment border_shopper,kappa,0.5
+segment border_shopper,trips,1.0
+segment border_shopper,size,1.3
+segment border_shopper,taste,{}
+segment border_shopper,dept,"(0.9, 1.2, 1.0, 1.2)"

@@ -15,6 +15,7 @@ STEPS = [
     "16_scenarios.py",     # Pillar 1 step 7: efficiencies 0-10% × λμ survives / dilutes / disappears
     "17_outcomes.py",      # Pillar 1 step 8: outcome table A-D, G + divestiture remedy curve
     "20_twin.py",          # Pillar 2 step 1: digital twin (store-week + store-category-week panels) + answer key [sim]
+    "21_events_loyalty.py",  # Pillar 2 step 2: Aldi/Lidl openings, Spar closures, loyalty-card panel [sim]
     # later steps append here: 20_screening.py, 30_simulation.py, ...
 ]
 

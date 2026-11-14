@@ -186,6 +186,7 @@ def choice_probs(theta: Params, mkt_arrays: dict, alpha_lr=None):
     which gives consumer surplus CS = logsum / alpha. alpha_lr (L, R) overrides alpha_types
     (used to reproduce the toy, where alpha varies by location). Optional mkt_arrays["p_store"] (J,) gives
     each store its own price (the digital twin); otherwise every store charges its banner's price theta.p[b].
+    Optional mkt_arrays["pair_xi"] (P,) adds a location-specific taste for a store (loyalty-panel households).
     """
     a = mkt_arrays
     L, G = a["hh"].shape[0], len(NESTS)
@@ -197,6 +198,8 @@ def choice_probs(theta: Params, mkt_arrays: dict, alpha_lr=None):
     price = a["p_store"][a["pair_store"]] if "p_store" in a else theta.p[b]       # store prices override banner prices
     V = (theta.delta[b] + xi)[:, None] - alpha_lr[a["pair_loc"]] * price[:, None] \
         - theta.gamma * a["pair_time"][:, None]                                   # (P, R)
+    if "pair_xi" in a:                                                             # taste of this location for this store
+        V = V + a["pair_xi"][:, None]
     V0 = -alpha_lr * theta.p_abroad - theta.kappa * a["border_min"][:, None]      # (L, R)
 
     lnD = _segment_logsumexp(V / lam, a["pair_seg"], L * G)                        # (L*G, R)

@@ -138,7 +138,8 @@ def make_week_demand(a: dict):
 
 
 def generate(theta: dm.Params, a: dict, store_canton: np.ndarray, store_nest: np.ndarray,
-             cfg: TwinConfig = TwinConfig(), open_week: np.ndarray | None = None, store_id=None):
+             cfg: TwinConfig = TwinConfig(), open_week: np.ndarray | None = None, store_id=None,
+             close_week: np.ndarray | None = None):
     """Simulate the twin. Returns dict of DataFrames:
 
     store_week   what the analyst sees: price, observed baskets and revenue, promotions, observed cost index
@@ -147,7 +148,10 @@ def generate(theta: dm.Params, a: dict, store_canton: np.ndarray, store_nest: np
     weekly       national: market size, abroad price, true abroad baskets
     store        store attributes and permanent quality ξ_j (hidden)
 
+    arrays       (T, J) price, demand shock, true baskets, active flag; (J,) permanent quality; (T,) M, abroad price
+
     open_week (J,): first week each store trades (default 0 = open throughout); used for entry events.
+    close_week (J,): first week a store no longer trades (default never); used for the closure wave.
     """
     rng = np.random.default_rng(cfg.seed)
     T = cfg.weeks
@@ -157,6 +161,8 @@ def generate(theta: dm.Params, a: dict, store_canton: np.ndarray, store_nest: np
     s = season(dates)
     M = market_size(s)
     open_week = np.zeros(J, int) if open_week is None else np.asarray(open_week)
+    close_week = np.full(J, 10 ** 6) if close_week is None else np.asarray(close_week)
+    active = (open_week[None, :] <= np.arange(T)[:, None]) & (np.arange(T)[:, None] < close_week[None, :])
 
     # permanent quality, demeaned within banner (keeps the calibrated banner shares roughly intact)
     xi_perm = rng.normal(0, cfg.xi_perm_sd, J)
@@ -183,17 +189,16 @@ def generate(theta: dm.Params, a: dict, store_canton: np.ndarray, store_nest: np
     q = np.empty((T, J))
     q0 = np.empty(T)
     for t in range(T):
-        xi = np.where(open_week <= t, xi_perm + xi_t[t], CLOSED_XI)
+        xi = np.where(active[t], xi_perm + xi_t[t], CLOSED_XI)
         qs, qa = wd(theta, jnp.asarray(price[t]), jnp.asarray(xi), p0[t])
         q[t], q0[t] = M[t] * np.asarray(qs), M[t] * float(qa)
-    is_open = open_week[None, :] <= np.arange(T)[:, None]
 
     q_obs = q * np.exp(rng.normal(0, cfg.sales_noise_sd, (T, J)))
     missing = rng.random((T, J)) < cfg.missing_rate
     for j in rng.choice(J, int(cfg.outage_store_share * J), replace=False):
         start, length = rng.integers(0, T - 12), rng.integers(4, 13)
         missing[start:start + length, j] = True
-    keep = is_open & ~missing
+    keep = active & ~missing
 
     tt, jj = np.nonzero(keep)
     store_id = np.arange(J) if store_id is None else np.asarray(store_id)
@@ -221,7 +226,9 @@ def generate(theta: dm.Params, a: dict, store_canton: np.ndarray, store_nest: np
     weekly = pd.DataFrame({"week": np.arange(T), "date": dates, "market_size": M, "p_abroad": p0,
                            "q_abroad_true": q0, **{k: s[k].to_numpy() for k in s}})
     store = pd.DataFrame({"store": np.arange(J), "store_id": store_id, "banner": np.array(dm.BANNERS)[sb],
-                          "canton": store_canton, "xi_perm": xi_perm, "open_week": open_week,
+                          "canton": store_canton, "xi_perm": xi_perm, "open_week": open_week, "close_week": close_week,
                           "region": region})
     return {"store_week": store_week, "truth_week": truth_week, "category": category, "weekly": weekly,
-            "store": store, "config": asdict(cfg)}
+            "store": store, "config": asdict(cfg),
+            "arrays": {"price": price, "xi_t": xi_t, "q": q, "active": active, "xi_perm": xi_perm, "M": M, "p0": p0,
+                       "dates": dates}}

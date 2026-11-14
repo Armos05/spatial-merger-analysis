@@ -40,6 +40,7 @@ Last updated: 14 Nov 2026.
 | D14 | Scenario grid: 5 efficiency levels × 3 λμ cases (15 equilibria) | `scripts/16_scenarios.py` | same solver as D13 | [calibrated] | `assets/p1/m7/1_7_*` |
 | D15 | Outcome table (rows A–D, G), remedy curve, divestiture list | `scripts/17_outcomes.py` | remedy = change of owner (+ new banner) then full equilibrium | [calibrated] | `assets/p1/m8/1_8_*` |
 | D16 | Digital twin panels (store-week, store × category × week) + answer key (true elasticity, diversion per store) | `scripts/20_twin.py` | Pillar 1 demand at simulated store prices and shocks | [sim] | `data/processed/twin/`, `assets/p2/m1/2_1_*` |
+| D17 | Events twin, counterfactual twin, entry/closure answer key, loyalty panel (households, trips, Cumulus view, Supercard view) | `scripts/21_events_loyalty.py` | same shocks as 2.1; entry truth = model with vs without each entrant | [sim] | `data/processed/twin/events/`, `assets/p2/m2/2_2_*` |
 
 ## Key numbers from Phase 1 (for the appendix)
 - **Population:** 9,123,704 in 347,736 populated hectares → 32,388 shopper locations.
@@ -74,4 +75,5 @@ Last updated: 14 Nov 2026.
 | A12 Conduct | one λμ for both cooperatives (fitted to Migros); rivals incl. fenaco λμ = 0; uniform national banner prices | firm-specific λμ (Coop alone 0.310) |
 | A13 Divestiture buyer | divested Coop supermarkets: new owner, brand δ_Coop − 0.2 (≈ CHF 7/basket weaker); Denner sold whole with its brand; buyer λμ = 0 or 0.357 | brand loss 0–0.4; buyer cost = seller cost |
 | A14 Digital twin | store quality sd 0.15; demand shock AR(1) ρ 0.7 sd 0.05; cost shocks banner×canton sd 0.010 + store sd 0.015, pass-through 0.8; price response to demand 0.5; flyers 15% × 3%; local promos 5% × 4%; EUR/CHF AR(1) sd 0.006; scanner noise 3%; 1.5% missing + 2% stores with outages; 20 categories with seasonal amplitudes | all [sim], seed 2027 (`2_1_twin_spec.csv`) |
+| A15 Twin events + loyalty panel | 120 of 429 real Aldi/Lidl stores open at random weeks 40–130; 40 of 214 Spar close in week 104; 20,000 households in 5 segments (α ×0.7–1.4, γ ×0.9–1.6, κ ×0.5–1.3, nest tastes); Cumulus held by 80%, Supercard by 70%, card shown on 90% of trips; Cumulus = Migros, Partner, Migrolino; Supercard = Coop, Pronto | all [sim] (`2_2_loyalty_config.csv`); card coverage of banners [assumed] |
 | A8 Income types | ESTV taxpayer classes merged into 7; representative incomes 20k, 35k, 45k, 62.5k, 87.5k, 150k, 300k | top-class value 200k–500k |
