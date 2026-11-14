@@ -1,0 +1,13 @@
+test,quantity,true_scale,unit,role,method,bias,rmse,relative_error_pct,coverage_95,note
+T1 entry,loss of stores within 3 km of a new discounter (12 cells),1.3664,pp,traditional,TWFE store-month,1.148,1.7806,130.3108,0.5,"monthly, nearest entrant only"
+T1 entry,loss of stores within 3 km of a new discounter (12 cells),1.3664,pp,modern alternative,stacked event study,1.443,2.48,181.4955,0.65,clean controls fail: wide spillovers
+T1 entry,loss of stores within 3 km of a new discounter (12 cells),1.3664,pp,best data-driven,pooled exposure regression,0.132,0.5282,38.6556,0.6,far bands understated
+T2 demand,own-price elasticity by banner (12 cells),4.373,elasticity,traditional,OLS-FE,1.8455,1.8457,42.2067,0.0,prices react to demand
+T2 demand,own-price elasticity by banner (12 cells),4.373,elasticity,modern alternative,DML-PLR (ML controls),2.0156,2.0157,46.0942,0.0,ML removes the good price variation
+T2 demand,own-price elasticity by banner (12 cells),4.373,elasticity,best data-driven,DML-PLIV (ML + cost),0.0673,0.0748,1.7105,0.4167,cost instrument + sister-store controls
+T3 local,"own-price elasticity of each store (4,565)",4.373,elasticity,traditional,national,0.0771,0.3213,7.3474,,one number for all stores
+T3 local,"own-price elasticity of each store (4,565)",4.373,elasticity,modern alternative,store-by-store IV,0.005,0.5286,12.0878,0.9165,unbiased but noisy
+T3 local,"own-price elasticity of each store (4,565)",4.373,elasticity,best data-driven,causal forest,0.0781,0.18,4.1162,0.4848,pools similar stores; shrinks extremes
+T3 screen,"local GUPPI ≥ 10%: share of 2,777 stores misclassified",100.0,% of stores,traditional,OLS national,6.021,6.163,80.526,,OLS margins flag every store
+T3 screen,"local GUPPI ≥ 10%: share of 2,777 stores misclassified",100.0,% of stores,modern alternative,store-by-store IV,0.119,0.33,1.995,,lowest GUPPI RMSE (noise averages out)
+T3 screen,"local GUPPI ≥ 10%: share of 2,777 stores misclassified",100.0,% of stores,best data-driven,causal forest,0.162,0.399,1.488,,fewest wrong flags
