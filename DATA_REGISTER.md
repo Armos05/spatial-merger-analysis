@@ -51,6 +51,7 @@ Last updated: 14 Nov 2026.
 | D25 | Personalised pricing scenarios per household (uniform/personal × competition/merger, ring-fenced, address-only, perfect data) | `scripts/32_pricing.py` | Nash / joint Newton per household on the firm belief model; truth evaluation | [sim] | `assets/p3/m3/3_3_*` |
 | D26 | Local-DP ring-fence curve: α̂ quality, ΔCS and firm gain by privacy budget ε (0.1-1000) | `scripts/33_ring_fence.py` | Laplace mechanism on 23 card features (clip 5-95%, b = d·range/ε) → T-learner → 3.3 pricing | [sim] | `assets/p3/m4/3_4_*` |
 | D27 | WEKO audit: paired synthetic loyalty profiles at 2,000 addresses, offers before/after; power by effect size | `scripts/34_audit.py` | LightGBM surrogate of α̂ + 3.3 coupon solver; two-sample and paired power formulas, 2% offer noise [assumed] | [sim] | `assets/p3/m5/3_5_*` |
+| D28 | Outcome-table data rows B+, B++, E, E', F under two conventions (personal pricing exists today / arrives with the merger) | `scripts/35_outcomes_data.py` | 3.3/3.4 panel increments at row-B prices added to Pillar 1 rows | [calibrated + sim] [approx] | `assets/p3/m6/3_6_*` |
 
 ## Key numbers from Phase 1 (for the appendix)
 - **Population:** 9,123,704 in 347,736 populated hectares → 32,388 shopper locations.

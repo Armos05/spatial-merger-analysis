@@ -1,0 +1,6 @@
+row,scenario,anchor,anchor_dcs,data_increment_chf_hh_year,dcs_chf_hh_year,alt_increment_if_personal_pricing_is_new,alt_dcs_if_personal_pricing_is_new
+B+,B with pooled-data personal pricing (today's data quality),B,-606.7,-2.47,-609.17,-213.75,-820.44
+B++,B with pooled-data personal pricing (perfect data),B,-606.7,-49.87,-656.57,-173.94,-780.63
+E,C + data ring-fence (privacy filter ε = 1),C,-531.91,192.49,-339.42,-18.78,-550.69
+E',C + Cumulus and Supercard kept apart (no pooling),C,-531.91,25.16,-506.75,-186.11,-718.02
+F,D5 + data ring-fence (privacy filter ε = 1),D5,-218.77,192.49,-26.28,-18.78,-237.55

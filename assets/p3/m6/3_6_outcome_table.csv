@@ -1,0 +1,16 @@
+row,scenario,dcs_chf_hh_year,data_increment_chf_hh_year,alt_dcs_if_personal_pricing_is_new
+A,Status quo,0.0,0.0,0.0
+B,"Merger, no remedy",-606.7,0.0,-606.7
+B+,B with pooled-data personal pricing (today's data quality),-609.17,-2.47,-820.44
+B++,B with pooled-data personal pricing (perfect data),-656.57,-49.87,-780.63
+C,B + 5% cost saving,-531.91,0.0,-531.91
+E,C + data ring-fence (privacy filter ε = 1),-339.42,192.49,-550.69
+E',C + Cumulus and Supercard kept apart (no pooling),-506.75,25.16,-718.02
+D1,C + sell Denner (profit-max buyer),-370.42,0.0,-370.42
+D2,C + sell top 25% Coop supermarkets by GUPPI (profit-max buyer),-404.5,0.0,-404.5
+D3,C + sell top 25% Coop supermarkets (cooperative buyer),-355.07,0.0,-355.07
+D4,C + sell top 50% Coop supermarkets (profit-max buyer),-311.09,0.0,-311.09
+D5,C + sell top 50% Coop supermarkets + Denner (profit-max buyers),-218.77,0.0,-218.77
+D6,C + sell top 50% Coop supermarkets + Denner (cooperative buyers),-76.72,0.0,-76.72
+F,D5 + data ring-fence (privacy filter ε = 1),-26.28,192.49,-237.55
+G,Prohibit,0.0,0.0,0.0
