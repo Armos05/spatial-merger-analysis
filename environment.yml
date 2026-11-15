@@ -24,9 +24,15 @@ dependencies:
   - scikit-learn
   - econml
   - linearmodels
+  - lightgbm          # T-learner, audit surrogates (Pillar 3)
   # plotting
   - matplotlib
   - contextily        # basemaps for maps
+  # report (Quarto -> PDF via LaTeX; run `quarto install tinytex` once if no LaTeX is installed)
+  - quarto
+  - nbformat
+  - nbclient
+  - pyyaml
   # tooling
   - pytest
   - ipykernel

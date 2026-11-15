@@ -21,3 +21,6 @@ toys/
 assets/**/*.md
 ROADMAP.md
 DESIGN.md
+
+# Report drafts and rendered PDFs (kept local; files already tracked stay tracked)
+report/
