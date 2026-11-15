@@ -1,0 +1,16 @@
+row,scenario,dcs_chf_hh_year,dcs_p05,dcs_p50,dcs_p95,dcs_bn_p05,dcs_bn_p95,dp_migros_pct,dp_coop_pct,alt_dcs_if_personal_pricing_is_new,alt_p05,alt_p95
+A,Status quo,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,
+B,"Merger, no remedy",-606.7,-825.33,-615.58,-457.09,-3.52,-1.95,18.03,20.91,,,
+B+,B with pooled-data personal pricing (today's data quality),-609.17,-827.8,-618.05,-459.56,-3.53,-1.96,,,-820.44,-1039.08,-670.84
+B++,B with pooled-data personal pricing (perfect data),-656.57,-875.2,-665.45,-506.96,-3.74,-2.16,,,-780.63,-999.27,-631.03
+C,B + 5% cost saving,-531.91,-762.93,-541.16,-373.18,-3.26,-1.59,15.75,18.43,,,
+E,C + data ring-fence (privacy filter ε = 1),-339.42,-570.44,-348.67,-180.69,-2.44,-0.77,,,-550.69,-781.71,-391.96
+E',C + Cumulus and Supercard kept apart (no pooling),-506.75,-737.77,-516.0,-348.02,-3.15,-1.49,,,-718.02,-949.04,-559.29
+D1,C + sell Denner (profit-max buyer),-370.42,-531.3,-376.86,-259.89,-2.27,-1.11,10.83,13.52,,,
+D2,C + sell top 25% Coop supermarkets by GUPPI (profit-max buyer),-404.5,-580.17,-411.53,-283.79,-2.48,-1.21,10.29,15.58,,,
+D3,C + sell top 25% Coop supermarkets (cooperative buyer),-355.07,-509.28,-361.24,-249.11,-2.17,-1.06,9.44,15.09,,,
+D4,C + sell top 50% Coop supermarkets (profit-max buyer),-311.09,-446.2,-316.5,-218.26,-1.9,-0.93,6.33,12.96,,,
+D5,C + sell top 50% Coop supermarkets + Denner (profit-max buyers),-218.77,-313.78,-222.57,-153.49,-1.34,-0.66,2.95,9.24,,,
+D6,C + sell top 50% Coop supermarkets + Denner (cooperative buyers),-76.72,-110.05,-78.06,-53.83,-0.47,-0.23,1.29,7.89,,,
+F,D5 + data ring-fence (privacy filter ε = 1),-26.28,-121.29,-30.08,39.0,-0.52,0.17,,,-237.55,-332.56,-172.27
+G,Prohibit,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,

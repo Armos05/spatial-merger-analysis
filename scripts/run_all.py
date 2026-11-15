@@ -27,6 +27,8 @@ STEPS = [
     "33_ring_fence.py",    # Pillar 3 step 4: local-DP ring-fence, privacy-vs-competition curve [sim]
     "34_audit.py",         # Pillar 3 step 5: WEKO test-account audit + power calculation [sim]
     "35_outcomes_data.py", # Pillar 3 step 6: outcome-table rows with the data channel (B+, B++, E, E', F)
+    "40_sensitivity.py",   # Phase 5 step 1: implicit-differentiation sensitivities, tornado, σ map
+    "41_montecarlo.py",    # Phase 5 step 2: Monte Carlo, 90% intervals on the outcome table
     # later steps append here: 20_screening.py, 30_simulation.py, ...
 ]
 
