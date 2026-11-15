@@ -203,7 +203,9 @@ def choice_probs(theta: Params, mkt_arrays: dict, alpha_lr=None):
     V0 = -alpha_lr * theta.p_abroad - theta.kappa * a["border_min"][:, None]      # (L, R)
 
     lnD = _segment_logsumexp(V / lam, a["pair_seg"], L * G)                        # (L*G, R)
-    I = (lam * lnD).reshape(L, G, -1)                                              # inclusive values
+    # empty nests: lnD = -inf. Keep I = -inf there without lam × (-inf), whose forward-mode tangent is 0 × inf = NaN
+    ok = jnp.isfinite(lnD)
+    I = jnp.where(ok, lam * jnp.where(ok, lnD, 0.0), -jnp.inf).reshape(L, G, -1)  # inclusive values
     logsum = jax.scipy.special.logsumexp(jnp.concatenate([V0[:, None, :], I], axis=1), axis=1)  # (L, R)
     lnPg = I - logsum[:, None, :]                                                  # ln P(g)
     lnPjg = V / lam - lnD[a["pair_seg"]]                                           # ln P(j | g)
